@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400,500&display=swap&subset=latin-ext');
+/* font-family: 'Oswald', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;700&display=swap');
+/* font-family: 'Raleway', sans-serif; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ANIMATIONS */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes slideDown {
+
+    100% {
+        transform: translate(0, 150%);
+    }
+
+}
+
+.wrapStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-basis: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    background: rgb(30, 54, 93);
+    background: linear-gradient(0deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%);
+    position: relative;
+}
+
+.horizontalNav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    background-color: black;
+    opacity: .8;
+    display: none;
+}
+
+.columnImages {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.columnImages__imgRunner {
+    width: 90%;
+    z-index: 1;
+}
+
+.columnImages__imgTriangle {
+    position: absolute;
+    width: 80%;
+    animation: rotate linear 170s infinite;
+}
+
+.columnImages__imgCrossWhite {
+    position: absolute;
+    width: 10%;
+    bottom: 13%;
+    right: 20%;
+    animation: rotate linear 180s infinite;
+    z-index: 1;
+}
+
+.columnImages__imgCrossBlue {
+    position: absolute;
+    width: 5%;
+    top: 5%;
+    right: 30%;
+    animation: rotate linear 60s infinite;
+    z-index: 1;
+}
+
+.columnImages__imgCrossBlue--smaller {
+    width: 4%;
+    top: 15%;
+    left: 15%;
+}
+
+
+.columnTexts {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.columnTexts__blockTypography {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.columnTexts__imgText {
+    margin-top: 30px;
+    width: 60%;
+}
+
+.columnTexts__descriptionText {
+    font-family: 'Raleway', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1.3;
+    width: 60%;
+    text-align: center;
+}
+
+.columnTexts_button {
+    font-size: 9px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 10px;
+    width: 75px;
+    height: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    background: rgb(111, 203, 220);
+    background: linear-gradient(90deg, rgba(111, 203, 220, 1) 11%, rgba(63, 83, 163, 1) 100%);
+    color: white;
+}
+
+.columnImages__slideDown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-60%, 0);
+    overflow: hidden;
+    text-align: center;
+}
+
+.columnImages__icon {
+    width: 60px;
+    color: white;
+    transform: scaleX(2);
+    animation: slideDown 1.7s linear infinite;
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .columnImages__imgRunner {
+        width: 80%;
+    }
+
+    .columnTexts__descriptionText {
+        font-size: 20px;
+        line-height: 1.3;
+    }
+
+    .columnTexts_button {
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+    }
+
+    .columnImages__icon {
+        width: 80px;
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .columnTexts__descriptionText {
+        width: 50%;
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .columnTexts_button {
+        font-size: 25px;
+        width: 180px;
+        height: 60px;
+    }
+
+    .columnImages__icon {
+        width: 100px;
+    }
+}

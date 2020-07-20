@@ -409,6 +409,7 @@ header .nav {
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   background-color: #0b0b0d;
+  font-family: "Oswald", sans-serif;
 }
 
 header .nav__list {
@@ -494,6 +495,7 @@ header .navBurger {
   right: unset;
   width: 100vw;
   height: 60vh;
+  font-family: "Oswald", sans-serif;
   background-color: white;
   z-index: 9999;
   -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);

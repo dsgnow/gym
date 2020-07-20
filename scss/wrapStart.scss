@@ -1,0 +1,180 @@
+.wrapStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-basis: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    background: rgb(30, 54, 93);
+    background: $mainGradient;
+    position: relative;
+}
+
+.columnImages {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__imgRunner {
+        width: 90%;
+        z-index: 1;
+        transform: translateX(0%);
+        animation: runnerIn 30s;
+        animation-fill-mode: forwards;
+    }
+
+    &__imgTriangle {
+        position: absolute;
+        width: 80%;
+        animation: rotate linear 170s infinite;
+    }
+
+    &__imgCrossWhite {
+        position: absolute;
+        width: 10%;
+        bottom: 13%;
+        right: 20%;
+        animation: rotateCross linear 56.6s infinite;
+        z-index: 1;
+    }
+
+    &__imgCrossBlue {
+        position: absolute;
+        width: 5%;
+        top: 5%;
+        right: 30%;
+        animation: rotateCross linear 56.6s infinite;
+        z-index: 1;
+
+        &--smaller {
+            width: 4%;
+            top: 15%;
+            left: 15%;
+        }
+
+    }
+
+    &__slideDown {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-60%, 0);
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &__icon {
+        width: 60px;
+        color: white;
+        transform: scaleX(2);
+        animation: slideDown 1.7s linear infinite;
+    }
+}
+
+.columnTexts {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: $secondFont;
+
+    &__blockTypography {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__imgText {
+        margin-top: 30px;
+        width: 60%;
+    }
+
+    &__descriptionText {
+        font-family: $secondFont;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 1.3;
+        width: 60%;
+        text-align: center;
+    }
+
+    &__btn {
+        font-size: 9px;
+        letter-spacing: 1px;
+        border: none;
+        border-radius: 10px;
+        width: 75px;
+        height: 25px;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 300;
+        background: rgb(111, 203, 220);
+        background: $secondGradient;
+        color: white;
+    }
+}
+
+
+
+@media (min-width: 768px) and (orientation: portrait) {
+    .columnImages {
+        &__imgRunner {
+            width: 80%;
+        }
+    }
+
+    .columnTexts {
+        &__descriptionText {
+            font-size: 20px;
+            line-height: 1.3;
+        }
+    }
+
+    .columnTexts {
+        &__btn {
+            font-size: 20px;
+            width: 150px;
+            height: 50px;
+        }
+    }
+
+    .columnImages {
+        &__icon {
+            width: 80px;
+        }
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    .columnTexts {
+        &__descriptionText {
+            width: 50%;
+            font-size: 25px;
+            line-height: 1.3;
+        }
+    }
+
+    .columnTexts {
+        &__btn {
+            font-size: 25px;
+            width: 180px;
+            height: 60px;
+        }
+    }
+
+    .columnImages {
+        &__icon {
+            width: 100px;
+        }
+    }
+}

@@ -1,0 +1,244 @@
+header .nav {
+  display: none;
+  position: fixed;
+  top: 0%;
+  right: 0%;
+  width: 10vw;
+  z-index: 9999;
+  width: 35%;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background-color: #0b0b0d;
+}
+
+header .nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-left: 5%;
+  padding: 15px 0;
+  font-size: 15px;
+}
+
+header .nav__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+}
+
+header .nav__link {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+  line-height: 30px;
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-bottom: 2px solid transparent;
+}
+
+header .nav__link--black {
+  color: black;
+}
+
+header .nav__link--selected {
+  -webkit-animation: addBorderLink ease-in .4s;
+          animation: addBorderLink ease-in .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+header .nav__link--selected.nav__link--black {
+  -webkit-animation: addBorderLinkBlack ease-in .4s;
+          animation: addBorderLinkBlack ease-in .4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+header .nav__link:hover {
+  font-weight: 700;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .navBurger {
+  display: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: fixed;
+  top: unset;
+  right: unset;
+  width: 100vw;
+  height: 60vh;
+  background-color: white;
+  z-index: 9999;
+  -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+}
+
+header .navBurger--show {
+  -webkit-animation: showFromTop 1s;
+          animation: showFromTop 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+header .navBurger--hide {
+  -webkit-animation: hideFromTop 1s;
+          animation: hideFromTop 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+header .navBurger__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  font-size: 25px;
+}
+
+header .navBurger__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 12vh;
+}
+
+header .navBurger__element:hover header .navBurger__link {
+  font-weight: 700;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .navBurger__link {
+  color: black;
+  width: 100%;
+  -webkit-transition: .3s;
+  transition: .3s;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  height: 100%;
+  line-height: 12vh;
+}
+
+header .navBurger__logo {
+  height: 60%;
+}
+
+header .navBurger__box {
+  position: fixed;
+  top: 5%;
+  right: 1%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 45px;
+  cursor: pointer;
+  padding: 5px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  z-index: 9999;
+}
+
+header .navBurger__box .navBurger__btn .navBurger__span {
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  height: 3px;
+  background: #222;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+  float: right;
+}
+
+header .navBurger__box .navBurger__btn .navBurger__span--black {
+  background: #222 !important;
+}
+
+header .navBurger__box .navBurger__btn .navBurger__span--white {
+  background: white;
+}
+
+header .navBurger__box .navBurger__btn .navBurger__span + .navBurger__span {
+  margin-top: 3px;
+}
+
+header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(1) {
+  -webkit-animation: ease .7s top forwards;
+          animation: ease .7s top forwards;
+}
+
+header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(1) {
+  -webkit-animation: ease .7s top-2 forwards;
+          animation: ease .7s top-2 forwards;
+}
+
+header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(2) {
+  -webkit-animation: ease .7s scaled forwards;
+          animation: ease .7s scaled forwards;
+}
+
+header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(2) {
+  -webkit-animation: ease .7s scaled-2 forwards;
+          animation: ease .7s scaled-2 forwards;
+}
+
+header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(3) {
+  -webkit-animation: ease .7s bottom forwards;
+          animation: ease .7s bottom forwards;
+}
+
+header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) {
+  -webkit-animation: ease .7s bottom-2 forwards;
+          animation: ease .7s bottom-2 forwards;
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <nav class="horizontalNav">
-            <ul class="horizontalNav__list">
-                <li class="horizontalNav__element">
-                    <a class="horizontalNav__link" href="#">Start</a></li>
-                <li class="horizontalNav__element">
-                    <a class="horizontalNav__link" href="#">O mnie</a></li>
-                <li class="horizontalNav__element">
-                    <a class="horizontalNav__link" href="#">Plan</a></li>
-                <li class="horizontalNav__element">
-                    <a class="horizontalNav__link" href="#">Kontakt</a></li>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__element">
+                    <a class="nav__link nav__link--start nav__link--selected" data-section="nav__link--start"
+                        href="#">Start</a></li>
+                <li class="nav__element">
+                    <a class="nav__link nav__link--about " data-section="nav__link--about" href="#">O mnie</a></li>
+                <li class="nav__element">
+                    <a class="nav__link nav__link--plan" data-section="nav__link--plan" href="#">Oferta</a></li>
+                <li class="nav__element">
+                    <a class="nav__link nav__link--contact" data-section="nav__link--contact" href="#">Kontakt</a></li>
             </ul>
         </nav>
+        <nav class="navBurger navBurger--hide">
+            <ul class="navBurger__list">
+                <li class="navBurger__element">
+                    <img class="navBurger__logo" src="img/logo.svg" alt="logo trener"></img>
+                </li>
+                <li class="navBurger__element navBurger__element--selected">
+                    <a class="navBurger__link navBurger__link--start" data-section="nav__link--start" href="#">Start</a>
+                </li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--about" data-section="nav__link--about" href="#">O
+                        mnie</a>
+                </li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--plan" data-section="nav__link--plan" href="#">Oferta</a>
+                </li>
+                <li class="navBurger__element">
+                    <a class="navBurger__link navBurger__link--contact" data-section="nav__link--contact"
+                        href="#">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="navBurger__box">
+            <div class="navBurger__btn navBurger__btn--notActive">
+                <span class="navBurger__span"></span>
+                <span class="navBurger__span"></span>
+                <span class="navBurger__span"></span>
+            </div>
+        </div>
     </header>
     <main>
         <div class="wrapStart">
@@ -34,7 +63,7 @@
                 <img class="columnImages__imgCrossBlue columnImages__imgCrossBlue--smaller" src="img/crossBlue.svg"
                     alt="blue cross">
                 <img class="columnImages__imgTriangle" src="img/triangleNew.png" alt="triangle">
-                <img class="columnImages__imgRunner" src="img/runnerOk.png" alt="biegacz">
+                <img class="columnImages__imgRunner" src="img/runnerOk.png" alt="runner">
             </section>
             <section class="columnTexts">
                 <div class="columnTexts__blockTypography">
@@ -43,11 +72,12 @@
                 <p class="columnTexts__descriptionText">Lorem ipsum dolor sit amet, consectetur adipiscing
                     elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna </p>
-                <button class="columnTexts_button">WYBIERZ PLAN</button>
+                <button class="button columnTexts__btn">WYBIERZ PLAN</button>
             </section>
         </div>
     </main>
     <script src="https://kit.fontawesome.com/4b11486782.js" crossorigin="anonymous"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 

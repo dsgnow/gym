@@ -21,7 +21,7 @@ $('.navBurger a').on('click', function () {
     $hambButton.toggleClass('navBurger__btn--notActive');
     $hambPop.toggleClass('navBurger--show');
     $hambPop.toggleClass('navBurger--hide');
-    $hambSpan.toggleClass('navBurger__span--black');
+    // $hambSpan.toggleClass('navBurger__span--black');
 
     const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
     $('body, html').animate({
@@ -34,7 +34,7 @@ $('.navBurger__btn').on('click', function (e) {
     e.preventDefault();
     $hambButton.toggleClass('navBurger__btn--active');
     $hambButton.toggleClass('navBurger__btn--notActive');
-    $hambSpan.toggleClass('navBurger__span--black');
+    // $hambSpan.toggleClass('navBurger__span--black');
 
     $hambPop.toggleClass('navBurger--show');
     $hambPop.toggleClass('navBurger--hide');

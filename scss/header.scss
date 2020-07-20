@@ -1,37 +1,152 @@
+@keyframes top {
+    0% {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        top: 3px;
+        transform: rotate(0);
+    }
+
+    100% {
+        top: 3px;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes top-2 {
+    0% {
+        top: 3px;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        top: 3px;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        top: 0;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+
+    50% {
+        bottom: 9px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 9px;
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes bottom-2 {
+    0% {
+        bottom: 9px;
+        transform: rotate(135deg);
+    }
+
+    50% {
+        bottom: 9px;
+        transform: rotate(0);
+    }
+
+    100% {
+        bottom: 0;
+        transform: rotate(0);
+    }
+}
+
+@keyframes scaled {
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes scaled-2 {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes showFromTop {
+    0% {
+        transform: translateY(-100%);
+
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes hideFromTop {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(-105%);
+    }
+}
+
 header {
     .nav {
         display: none;
         position: fixed;
         top: 0%;
-        right: 0%;
-        width: 10vw;
+        left: 50%;
+        transform: translate(-50%, 0);
         z-index: 9999;
-        width: 35%;
+        width: 50%;
         transition: .3s ease-in-out;
-        background-color: #0b0b0d;
+        background-color: rgba(11, 11, 13, 0.8);
         font-family: $mainFont;
+        text-transform: uppercase;
 
 
-        &__list {
+        .nav__list {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             margin: 0 auto;
-            margin-left: 5%;
-            padding: 15px 0;
+            padding: 10px 15px;
             font-size: 15px;
+            width: 100%;
         }
 
-        &__element {
+        .nav__element {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            width: 25%;
+            width: 20%;
         }
 
-        &__link {
+        .nav__link {
             text-decoration: none;
             display: block;
             text-align: center;
@@ -57,8 +172,8 @@ header {
             }
         }
 
-        &__link:hover {
-            font-weight: 700;
+        .nav__link:hover {
+            font-weight: 500;
             transform: scale(1.1);
         }
 
@@ -73,6 +188,7 @@ header {
         width: 100vw;
         height: 60vh;
         font-family: $mainFont;
+        text-transform: uppercase;
         background-color: white;
         z-index: 9999;
         -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
@@ -89,7 +205,7 @@ header {
             animation-fill-mode: forwards;
         }
 
-        &__list {
+        .navBurger__list {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -99,7 +215,7 @@ header {
             font-size: 25px;
         }
 
-        &__element {
+        .navBurger__element {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -108,23 +224,27 @@ header {
             height: 12vh;
         }
 
-        &__element:hover &__link {
-            font-weight: 700;
+        .navBurger__element:nth-child(1) {
+            background-color: rgba(11, 25, 50, 1);
+        }
+
+        .navBurger__element:hover .navBurger__link {
+            font-weight: 500;
             transform: scale(1.1);
         }
 
-        &__link {
+        .navBurger__link {
             color: black;
             width: 100%;
             transition: .3s;
-            font-weight: 700;
+            font-weight: 500;
             text-decoration: none;
             text-align: center;
             height: 100%;
             line-height: 12vh;
         }
 
-        &__logo {
+        .navBurger__logo {
             height: 60%;
         }
 
@@ -132,9 +252,8 @@ header {
 
     .navBurger__box {
         position: fixed;
-        top: 5%;
-        right: 1%;
-        transform: translate(-50%, -50%);
+        top: 10px;
+        right: 10px;
         width: 45px;
         cursor: pointer;
         padding: 5px;
@@ -191,6 +310,171 @@ header {
             }
 
         }
+    }
+
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+    @keyframes top {
+        0% {
+            top: 0;
+            transform: rotate(0);
+        }
+
+        50% {
+            top: 6px;
+            transform: rotate(0);
+        }
+
+        100% {
+            top: 6px;
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes top-2 {
+        0% {
+            top: 6px;
+            transform: rotate(45deg);
+        }
+
+        50% {
+            top: 6px;
+            transform: rotate(0deg);
+        }
+
+        100% {
+            top: 0;
+            transform: rotate(0deg);
+        }
+    }
+
+    @keyframes bottom {
+        0% {
+            bottom: 0;
+            transform: rotate(0);
+        }
+
+        50% {
+            bottom: 14px;
+            transform: rotate(0);
+        }
+
+        100% {
+            bottom: 14px;
+            transform: rotate(135deg);
+        }
+    }
+
+    @keyframes bottom-2 {
+        0% {
+            bottom: 14px;
+            transform: rotate(135deg);
+        }
+
+        50% {
+            bottom: 14px;
+            transform: rotate(0);
+        }
+
+        100% {
+            bottom: 0;
+            transform: rotate(0);
+        }
+    }
+
+
+
+    header {
+
+        .navBurger {
+
+            .navBurger__list {
+                font-size: 35px;
+            }
+
+        }
+
+        .navBurger__box {
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            padding: 5px;
+
+            .navBurger__btn {
+
+                .navBurger__span {
+                    height: 6px;
+                }
+
+                .navBurger__span+.navBurger__span {
+                    margin-top: 4px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+    header {
+        .navBurger {
+
+            .navBurger__list {
+                font-size: 55px;
+            }
+
+        }
+
+        .navBurger__box {
+            top: 40px;
+            right: 40px;
+
+        }
+
+    }
+}
+
+@media (orientation: landscape) {
+    header {
+        .navBurger {
+            height: 100vh;
+
+            .navBurger__list {
+                font-size: 25px;
+            }
+
+            .navBurger__element {
+                height: 20vh;
+            }
+
+            .navBurger__link {
+                line-height: 20vh;
+            }
+        }
+
+    }
+}
+
+@media (orientation: landscape) and (min-width:1024px) {
+    header {
+        .nav {
+            display: flex;
+
+            .nav__list {
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+        }
+
+        .navBurger {
+            display: none;
+        }
+
+        .navBurger__box {
+            display: none;
+        }
+
     }
 
 }

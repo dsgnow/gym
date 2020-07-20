@@ -13,15 +13,79 @@
     box-sizing: border-box;
 }
 
-/* ANIMATIONSs */
+/* ANIMATIONS */
 
 @keyframes rotate {
     0% {
         transform: rotate(0);
+        opacity: 0;
     }
+
+    0.1% {
+        transform: rotate(30deg);
+    }
+
+
+    0.3% {
+        opacity: 1;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    1.6% {
+        opacity: .4;
+    }
+
+    1.9% {
+        opacity: 1;
+    }
+
+    2.6% {
+        opacity: 1;
+    }
+
+    2.8% {
+        opacity: .4;
+    }
+
+    3.2% {
+        opacity: 1;
+    }
+
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateCross {
+    0% {
+        transform: rotate(0);
+    }
+
+    0.6% {
+        transform: rotate(30deg);
+    }
+
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes runnerIn {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    1% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-10%);
     }
 }
 
@@ -48,7 +112,7 @@
     position: relative;
 }
 
-.horizontalNav {
+.navigation {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -71,6 +135,9 @@
 .columnImages__imgRunner {
     width: 90%;
     z-index: 1;
+    transform: translateX(-100%);
+    animation: runnerIn 30s;
+    animation-fill-mode: forwards;
 }
 
 .columnImages__imgTriangle {
@@ -84,7 +151,7 @@
     width: 10%;
     bottom: 13%;
     right: 20%;
-    animation: rotate linear 180s infinite;
+    animation: rotateCross linear 56.6s infinite;
     z-index: 1;
 }
 
@@ -93,7 +160,7 @@
     width: 5%;
     top: 5%;
     right: 30%;
-    animation: rotate linear 60s infinite;
+    animation: rotateCross linear 56.6s infinite;
     z-index: 1;
 }
 
@@ -145,7 +212,7 @@
     width: 75px;
     height: 25px;
     font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     background: rgb(111, 203, 220);
     background: linear-gradient(90deg, rgba(111, 203, 220, 1) 11%, rgba(63, 83, 163, 1) 100%);
     color: white;
@@ -205,3 +272,5 @@
         width: 100px;
     }
 }
+
+@media (orientation: landscape) {}

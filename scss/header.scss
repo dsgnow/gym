@@ -144,6 +144,10 @@ header {
             justify-content: center;
             align-items: center;
             width: 20%;
+
+            .nav__logo {
+                height: 40%;
+            }
         }
 
         .nav__link {
@@ -222,6 +226,10 @@ header {
             flex-direction: row;
             width: 100%;
             height: 12vh;
+
+            .navBurger__logo {
+                height: 40%;
+            }
         }
 
         .navBurger__element:nth-child(1) {

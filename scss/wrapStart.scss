@@ -120,31 +120,6 @@
             animation: rotate linear 170s infinite;
         }
 
-        .columnImages__imgCrossWhite {
-            position: absolute;
-            width: 10%;
-            bottom: 13%;
-            right: 20%;
-            animation: rotateCross linear 56.6s infinite;
-            z-index: 1;
-        }
-
-        .columnImages__imgCrossBlue {
-            position: absolute;
-            width: 5%;
-            top: 5%;
-            right: 30%;
-            animation: rotateCross linear 56.6s infinite;
-            z-index: 1;
-
-            &--smaller {
-                width: 4%;
-                top: 15%;
-                left: 15%;
-            }
-
-        }
-
         .columnImages__slideDown {
             position: absolute;
             bottom: 0;
@@ -198,18 +173,6 @@
             margin: 20px 0;
         }
 
-        .columnTexts__btn,
-        .button {
-            font-size: 13px;
-            letter-spacing: 1px;
-            border: 1px solid #4a9fe0;
-            padding: 5px 10px;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 500;
-            color: white;
-            background-color: transparent;
-            z-index: 999;
-        }
     }
 
 }
@@ -233,14 +196,6 @@
             }
         }
 
-        .columnTexts {
-            .columnTexts__btn {
-                font-size: 18px;
-                border: 2px solid #4a9fe0;
-                padding: 10px 15px;
-            }
-        }
-
     }
 
 }
@@ -256,13 +211,6 @@
 
             .columnImages__icon {
                 width: 100px;
-            }
-        }
-
-        .columnTexts {
-            .columnTexts__btn {
-                padding: 15px 20px;
-                font-size: 25px;
             }
         }
 
@@ -302,10 +250,6 @@
                 margin: 20px 0;
             }
 
-            .columnTexts__btn,
-            .button {
-                font-size: 11px;
-            }
         }
     }
 }
@@ -321,12 +265,6 @@
                 margin: 50px 0;
             }
 
-            .columnTexts__btn,
-            .button {
-                padding: 10px 16px;
-                border-width: 2px;
-                font-size: 14px;
-            }
         }
     }
 }
@@ -341,12 +279,6 @@
                 margin: 50px 0;
             }
 
-            .columnTexts__btn,
-            .button {
-                font-size: 24px;
-                border-width: 3px;
-                padding: 12px 18px;
-            }
         }
 
     }
@@ -376,10 +308,6 @@
                 width: 60%;
             }
 
-            .columnTexts__btn,
-            .button {
-                font-size: 26px;
-            }
         }
     }
 }

@@ -9,10 +9,10 @@ let mql = window.matchMedia("(orientation: portrait)");
 
 if (mql.matches) {
     $hambSpan.addClass('navBurger__span--white');
-    $hambSpan.removeClass('navBurger__span--black');
+    // $hambSpan.removeClass('navBurger__span--black');
 } else {
-    $hambSpan.addClass('navBurger__span--black');
-    $hambSpan.removeClass('navBurger__span--white');
+    // $hambSpan.addClass('navBurger__span--black');
+    $hambSpan.addClass('navBurger__span--white');
 }
 
 $('.navBurger a').on('click', function () {

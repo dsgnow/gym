@@ -1,6 +1,197 @@
 .wrapAbout {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
     overflow: hidden;
+    height: 100vh;
+    background: rgb(30, 54, 93);
+    background: $mainGradient;
+    font-family: $mainFont;
+    position: relative;
+
+    .columnAboutTexts {
+        width: 100vw;
+        height: 70vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        min-height: 250px;
+        min-width: 300px;
+
+        .columnAboutTexts__imgCrossWhite {
+            right: unset;
+            left: 7%;
+            bottom: 7%;
+        }
+
+        .columnAboutTexts__imgCrossBlue {
+            right: 7%;
+            top: 15%;
+
+            &--smaller {
+                top: 6%;
+                left: 8%;
+            }
+
+        }
+
+        .columnAboutTexts__imgOk {
+            height: 40px;
+            position: absolute;
+            right: 10%;
+            bottom: 10%;
+        }
+
+        .columnAboutTexts__article {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+            .columnAboutTexts__title {
+                color: black;
+                background-color: white;
+                width: 60%;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 40px;
+                font-weight: 500;
+                z-index: 9;
+            }
+
+            .columnAboutTexts__subTitle {
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: 400;
+                width: 100%;
+                height: auto;
+                margin: 2% 0;
+                background-color: rgba($color: #000000, $alpha: .3);
+            }
+
+            .columnAboutTexts__description {
+                width: 60%;
+                font-family: $secondFont;
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 1.3;
+                text-align: left;
+                color: #d1d1d1;
+            }
+
+        }
+
+        .columnAboutTexts__socialmedia {
+            .columnAboutTexts_icon {
+                color: white;
+                font-size: 20px;
+                margin: 10px 10px;
+            }
+        }
+    }
+
+
+    .columnAboutImages {
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        min-height: 200px;
+        min-width: 300px;
+
+        .columnAboutImages__imgTrainer {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+    }
+}
+
+@media (orientation: portrait) and (min-height: 600px) {
+    .wrapAbout {
+
+        .columnAboutTexts {
+            height: 50vh;
+        }
+
+        .columnAboutImages {
+            height: 50vh;
+
+            .columnAboutImages__imgTrainer {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 140%;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+    .wrapAbout {
+
+        .columnAboutTexts {
+
+
+            .columnAboutTexts__imgOk {
+                height: 80px;
+            }
+
+            .columnAboutTexts__article {
+
+                .columnAboutTexts__title {
+                    font-size: 70px;
+                    width: 60%;
+                }
+
+                .columnAboutTexts__subTitle {
+                    font-size: 45px;
+                    margin: 20px 0;
+                }
+
+                .columnAboutTexts__description {
+                    font-size: 20px;
+                    width: 60%;
+                }
+
+            }
+
+            .columnAboutTexts__socialmedia {
+                .columnAboutTexts_icon {
+                    font-size: 40px;
+                    margin: 30px 20px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+    .wrapAbout {
+
+        .columnAboutTexts {
+
+            .columnAboutTexts__article {
+
+                .columnAboutTexts__description {
+                    font-size: 24px;
+                    width: 60%;
+                }
+
+            }
+        }
+    }
 }

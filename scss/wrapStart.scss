@@ -83,11 +83,10 @@
 
 .wrapStart {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     flex-direction: column-reverse;
     align-items: center;
-    flex-basis: 100vw;
+    max-width: 100vw;
     overflow: hidden;
     height: 100vh;
     background: rgb(30, 54, 93);
@@ -236,8 +235,6 @@
             width: 50vw;
             height: 100vh;
             justify-content: center;
-
-            .columnTexts__blockTypography {}
 
             .columnTexts__imgText {
                 width: 80%;

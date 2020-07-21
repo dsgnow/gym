@@ -42,8 +42,8 @@
         .columnAboutTexts__imgOk {
             height: 40px;
             position: absolute;
-            right: 10%;
-            bottom: 10%;
+            right: 8%;
+            bottom: 8%;
         }
 
         .columnAboutTexts__article {
@@ -78,7 +78,7 @@
             .columnAboutTexts__description {
                 width: 60%;
                 font-family: $secondFont;
-                font-size: 12px;
+                font-size: 13px;
                 font-weight: 300;
                 line-height: 1.3;
                 text-align: left;
@@ -90,8 +90,8 @@
         .columnAboutTexts__socialmedia {
             .columnAboutTexts_icon {
                 color: white;
-                font-size: 20px;
-                margin: 10px 10px;
+                font-size: 25px;
+                margin: 20px 15px;
             }
         }
     }
@@ -119,15 +119,15 @@
     }
 }
 
-@media (orientation: portrait) and (min-height: 600px) {
+@media (orientation: portrait) and (min-width: 360px) {
     .wrapAbout {
 
         .columnAboutTexts {
-            height: 50vh;
+            height: 55vh;
         }
 
         .columnAboutImages {
-            height: 50vh;
+            height: 45vh;
 
             .columnAboutImages__imgTrainer {
                 position: absolute;
@@ -183,6 +183,12 @@
     .wrapAbout {
 
         .columnAboutTexts {
+
+            .columnAboutTexts__socialmedia {
+                .columnAboutTexts_icon {
+                    font-size: 50px;
+                }
+            }
 
             .columnAboutTexts__article {
 

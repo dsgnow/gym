@@ -96,7 +96,7 @@
 
     .columnImages {
         width: 100vw;
-        height: 60vh;
+        height: 55vh;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -122,7 +122,7 @@
 
     .columnTexts {
         width: 100vw;
-        height: 40vh;
+        height: 45vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -130,7 +130,7 @@
         text-align: center;
         color: white;
         font-family: $secondFont;
-        min-height: 200px;
+        min-height: 250px;
         min-width: 200px;
 
         .columnTexts__blockTypography {
@@ -165,7 +165,7 @@
 
         .columnImages {
             .columnImages__imgRunner {
-                width: 90%;
+                width: 85%;
             }
         }
 

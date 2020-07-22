@@ -1008,7 +1008,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 
 .wrapStart .columnImages {
   width: 100vw;
-  height: 60vh;
+  height: 55vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1047,7 +1047,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 
 .wrapStart .columnTexts {
   width: 100vw;
-  height: 40vh;
+  height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1064,7 +1064,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   text-align: center;
   color: white;
   font-family: "Montserrat", sans-serif;
-  min-height: 200px;
+  min-height: 250px;
   min-width: 200px;
 }
 
@@ -1102,7 +1102,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 
 @media (orientation: portrait) and (min-width: 360px) {
   .wrapStart .columnImages .columnImages__imgRunner {
-    width: 90%;
+    width: 85%;
   }
   .wrapStart .columnTexts .columnTexts__descriptionText {
     font-size: 14px;
@@ -1320,7 +1320,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__subTitle {
   text-transform: uppercase;
   text-align: center;
-  font-weight: 100;
+  font-weight: 400;
   width: 100%;
   height: auto;
   margin: 2% 0;
@@ -1514,7 +1514,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 
 .wrapOffer .columnOfferTexts {
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1529,7 +1529,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  min-height: 250px;
+  min-height: 150px;
   min-width: 300px;
   background: #1e365d;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(11%, #1e365d), color-stop(53%, #0f1d37), to(#0b1932));
@@ -1593,17 +1593,22 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
 }
 
 .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list {
+  display: none;
   font-family: "Montserrat", sans-serif;
   font-size: 10px;
+  max-width: 70%;
+  text-align: center;
+  list-style: none;
 }
 
 .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list .columnOfferTexts__listElement .columnOfferTexts__listElementImg {
-  height: 20px;
+  height: 15px;
+  margin-left: 10px;
 }
 
 .wrapOffer .columnOfferPlans {
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1623,10 +1628,15 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   min-width: 300px;
 }
 
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer {
+  max-width: 70%;
+}
+
 .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1639,16 +1649,16 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
           align-items: center;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(11%, #1e365d), color-stop(53%, #0f1d37), to(#0b1932));
   background: linear-gradient(0deg, #1e365d 11%, #0f1d37 53%, #0b1932 100%);
-  border-radius: 20px;
   padding: 30px 20px 30px;
+  border-radius: 20px;
+  min-height: 200px;
 }
 
-.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer h3,
-.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer p,
-.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer button {
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__price,
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__description,
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__btn {
   font-family: "Montserrat", sans-serif;
-  background: -webkit-gradient(linear, left top, right top, color-stop(11%, #bf65a7), to(#ffd02b));
-  background: linear-gradient(90deg, #bf65a7 11%, #ffd02b 100%);
+  background: linear-gradient(120deg, #bf65a7 11%, #ffd02b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1673,8 +1683,7 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   list-style: none;
   width: 100%;
   color: white;
-  background: -webkit-gradient(linear, left top, right top, color-stop(11%, #bf65a7), to(#ffd02b));
-  background: linear-gradient(90deg, #bf65a7 11%, #ffd02b 100%);
+  background: linear-gradient(120deg, #bf65a7 11%, #ffd02b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1689,8 +1698,149 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans_btn {
-  font-family: "Oswald", sans-serif;
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__btn {
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
+  border-color: #3763aa;
+}
+
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType {
+  position: absolute;
+  top: 50px;
+  left: -60px;
+  height: 100px;
+  width: 140px;
+  background: linear-gradient(120deg, #bf65a7 11%, #ffd02b 100%);
+  z-index: -1;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  border-radius: 20px;
+}
+
+.wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType .columnOfferPlans__stickyTypeText {
+  font-size: 25px;
+  text-align: center;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(11%, #1e365d), color-stop(53%, #0f1d37), to(#0b1932));
+  background: linear-gradient(0deg, #1e365d 11%, #0f1d37 53%, #0b1932 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (orientation: portrait) and (min-width: 360px) and (min-height: 550px) {
+  .wrapOffer .columnOfferTexts {
+    height: 40vh;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list {
+    display: block;
+  }
+  .wrapOffer .columnOfferPlans {
+    height: 60vh;
+  }
+}
+
+@media (orientation: portrait) and (min-height: 640px) {
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__listElement {
+    font-size: 13px;
+    padding: 2px 0;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__description {
+    font-size: 11px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__list .columnOfferPlans__listElement {
+    font-size: 13px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .wrapOffer .columnOfferTexts {
+    height: 40vh;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__title {
+    width: 50%;
+    font-size: 55px;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__subTitle {
+    font-size: 45px;
+    margin: 2% 0;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list .columnOfferTexts__listElement {
+    font-size: 20px;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list .columnOfferTexts__listElement .columnOfferTexts__listElementImg {
+    height: 28px;
+  }
+  .wrapOffer .columnOfferPlans {
+    height: 60vh;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer {
+    max-width: 60%;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer {
+    padding: 30px 20px 30px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__price {
+    font-size: 80px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__description {
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__list .columnOfferPlans__listElement {
+    font-size: 20px;
+    margin: 5px 0;
+    padding: 8px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType {
+    top: 70px;
+    left: -90px;
+    height: 150px;
+    width: 210px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType .columnOfferPlans__stickyTypeText {
+    font-size: 35px;
+    padding: 5px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__title {
+    font-size: 75px;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__subTitle {
+    font-size: 60px;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list .columnOfferTexts__listElement {
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .wrapOffer .columnOfferTexts .columnOfferTexts__article .columnOfferTexts__list .columnOfferTexts__listElement .columnOfferTexts__listElementImg {
+    height: 32px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer {
+    padding: 30px 20px 30px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__price {
+    font-size: 100px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__description {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__list .columnOfferPlans__listElement {
+    font-size: 25px;
+    margin: 5px 0;
+    padding: 8px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType {
+    top: 70px;
+    left: -90px;
+    height: 150px;
+    width: 210px;
+  }
+  .wrapOffer .columnOfferPlans .columnOfferPlans__wrapOffer .columnOfferPlans__offer .columnOfferPlans__stickyType .columnOfferPlans__stickyTypeText {
+    font-size: 35px;
+    padding: 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

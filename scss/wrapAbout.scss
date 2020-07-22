@@ -68,7 +68,7 @@
             .columnAboutTexts__subTitle {
                 text-transform: uppercase;
                 text-align: center;
-                font-weight: 400;
+                font-weight: 100;
                 width: 100%;
                 height: auto;
                 margin: 2% 0;
@@ -77,12 +77,12 @@
 
             .columnAboutTexts__description {
                 width: 60%;
-                font-family: $secondFont;
                 font-size: 13px;
                 font-weight: 300;
                 line-height: 1.3;
                 text-align: left;
-                color: #d1d1d1;
+                color: white;
+                font-family: $secondFont;
             }
 
         }

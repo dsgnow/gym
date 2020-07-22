@@ -40,6 +40,25 @@
   left: 15%;
 }
 
+.slideDown {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-60%, 0);
+          transform: translate(-60%, 0);
+  overflow: hidden;
+  text-align: center;
+}
+
+.icon {
+  width: 60px;
+  color: white;
+  -webkit-transform: scaleX(2);
+          transform: scaleX(2);
+  -webkit-animation: slideDown 1.7s linear infinite;
+          animation: slideDown 1.7s linear infinite;
+}
+
 .button {
   font-size: 14px;
   letter-spacing: 1px;
@@ -1004,8 +1023,8 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .wrapStart .columnImages .columnImages__imgRunner {
@@ -1024,25 +1043,6 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   width: 80%;
   -webkit-animation: rotate linear 170s infinite;
           animation: rotate linear 170s infinite;
-}
-
-.wrapStart .columnImages .columnImages__slideDown {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translate(-60%, 0);
-          transform: translate(-60%, 0);
-  overflow: hidden;
-  text-align: center;
-}
-
-.wrapStart .columnImages .columnImages__icon {
-  width: 60px;
-  color: white;
-  -webkit-transform: scaleX(2);
-          transform: scaleX(2);
-  -webkit-animation: slideDown 1.7s linear infinite;
-          animation: slideDown 1.7s linear infinite;
 }
 
 .wrapStart .columnTexts {
@@ -1064,8 +1064,8 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   text-align: center;
   color: white;
   font-family: "Montserrat", sans-serif;
-  min-height: 300px;
-  min-width: 300px;
+  min-height: 200px;
+  min-width: 200px;
 }
 
 .wrapStart .columnTexts .columnTexts__blockTypography {
@@ -1416,6 +1416,78 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
   .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__description {
     font-size: 24px;
     width: 60%;
+  }
+}
+
+@media (orientation: landscape) {
+  .wrapAbout {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .wrapAbout .columnAboutTexts {
+    width: 55vw;
+    height: 100vh;
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .wrapAbout .columnAboutImages {
+    width: 45vw;
+    height: 100vh;
+    min-height: 200px;
+    min-width: 200px;
+  }
+  .wrapAbout .columnAboutImages .columnAboutImages__imgTrainer {
+    width: 200%;
+    right: -20%;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .wrapAbout .columnAboutTexts .columnAboutTexts__imgOk {
+    height: 80px;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__title {
+    font-size: 70px;
+    width: 60%;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__subTitle {
+    font-size: 45px;
+    margin: 20px 0;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__description {
+    font-size: 20px;
+    width: 60%;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__socialmedia .columnAboutTexts_icon {
+    font-size: 40px;
+    margin: 30px 20px;
+  }
+  .wrapAbout .columnAboutImages .columnAboutImages__imgTrainer {
+    width: 200%;
+    right: -20%;
+    top: auto;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+  .wrapAbout .columnAboutTexts {
+    width: 45vw;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__title {
+    font-size: 90px;
+  }
+  .wrapAbout .columnAboutTexts .columnAboutTexts__article .columnAboutTexts__subTitle {
+    font-size: 55px;
+  }
+  .wrapAbout .columnAboutImages {
+    width: 55vw;
+  }
+  .wrapAbout .columnAboutImages .columnAboutImages__imgTrainer {
+    width: 160%;
+    right: -5%;
+    top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

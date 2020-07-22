@@ -201,3 +201,113 @@
         }
     }
 }
+
+@media (orientation: landscape) {
+    .wrapAbout {
+        flex-direction: row;
+
+        .columnAboutTexts {
+            width: 55vw;
+            height: 100vh;
+            min-height: 200px;
+            min-width: 200px;
+        }
+
+
+        .columnAboutImages {
+            width: 45vw;
+            height: 100vh;
+            min-height: 200px;
+            min-width: 200px;
+
+            .columnAboutImages__imgTrainer {
+                width: 200%;
+                right: -20%;
+            }
+
+        }
+    }
+
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+    .wrapAbout {
+
+        .columnAboutTexts {
+
+            .columnAboutTexts__imgOk {
+                height: 80px;
+            }
+
+            .columnAboutTexts__article {
+
+                .columnAboutTexts__title {
+                    font-size: 70px;
+                    width: 60%;
+                }
+
+                .columnAboutTexts__subTitle {
+                    font-size: 45px;
+                    margin: 20px 0;
+                }
+
+                .columnAboutTexts__description {
+                    font-size: 20px;
+                    width: 60%;
+                }
+
+            }
+
+            .columnAboutTexts__socialmedia {
+                .columnAboutTexts_icon {
+                    font-size: 40px;
+                    margin: 30px 20px;
+                }
+            }
+        }
+
+        .columnAboutImages {
+
+            .columnAboutImages__imgTrainer {
+                width: 200%;
+                right: -20%;
+                top: auto;
+            }
+
+        }
+
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+    .wrapAbout {
+
+        .columnAboutTexts {
+            width: 45vw;
+
+            .columnAboutTexts__article {
+
+                .columnAboutTexts__title {
+                    font-size: 90px;
+                }
+
+                .columnAboutTexts__subTitle {
+                    font-size: 55px;
+                }
+
+            }
+        }
+
+        .columnAboutImages {
+            width: 55vw;
+
+            .columnAboutImages__imgTrainer {
+                width: 160%;
+                right: -5%;
+                top: 0;
+            }
+
+        }
+
+    }
+}

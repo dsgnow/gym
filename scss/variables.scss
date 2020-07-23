@@ -16,4 +16,6 @@ $mainGradient: linear-gradient(0deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1
 $mainGradientHorizontal: linear-gradient(90deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%);
 $secondGradient: linear-gradient(90deg, rgba(111, 203, 220, 1) 11%, rgba(63, 83, 163, 1) 100%);
 
-$offerGradientBasic: linear-gradient(120deg, rgba(191, 101, 167, 1) 11%, rgba(255, 208, 43, 1) 100%);
+$offerGradientBasic: $secondGradient;
+$offerGradientPremium: linear-gradient(120deg, rgba(191, 101, 167, 1) 11%, rgba(255, 208, 43, 1) 100%);
+$offerGradientNormal: linear-gradient(120deg, rgba(191, 101, 167, 1) 11%, rgba(63, 83, 163, 1) 100%);

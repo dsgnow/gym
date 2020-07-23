@@ -1,3 +1,62 @@
+@keyframes slideChange {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+
+    }
+
+    50% {
+        transform: translate3d(-20px, 0px, 0px);
+        z-index: 999;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+    }
+}
+
+@keyframes slideChange1 {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+
+    }
+
+    50% {
+        transform: translate3d(-20px, 0px, 0px);
+        z-index: 999;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+    }
+}
+
+@keyframes slideHand {
+    0% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+
+    }
+
+    30% {
+        transform: translate3d(5px, 0px, 0px);
+        z-index: 999;
+    }
+
+    40% {
+        transform: translate3d(5px, 0px, 0px);
+        z-index: 999;
+    }
+
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+        z-index: 999;
+    }
+}
+
 .wrapOffer {
     display: flex;
     flex-direction: column;
@@ -99,11 +158,35 @@
         min-height: 200px;
         min-width: 300px;
 
+        .columnOfferPlans__swipe {
+
+            .columnOfferPlans__swipeImg {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 2%;
+                z-index: 999;
+                height: 50px;
+                animation: slideHand 2s infinite;
+            }
+        }
+
         .columnOfferPlans__wrapOffer {
             max-width: 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            animation: slideChange1 1s;
+            animation-fill-mode: forwards;
+
+            &--active {
+                animation: slideChange 1s;
+                animation-fill-mode: forwards;
+            }
 
             .columnOfferPlans__offer {
-                display: flex;
+                display: none;
                 position: relative;
                 flex-direction: column;
                 justify-content: center;
@@ -113,6 +196,12 @@
                 border-radius: 20px;
                 min-height: 200px;
 
+                &--active {
+                    display: flex;
+                }
+
+
+
                 .columnOfferPlans__price,
                 .columnOfferPlans__description,
                 .columnOfferPlans__btn {
@@ -120,7 +209,21 @@
                     background: $offerGradientBasic;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+
+                    &--standard {
+                        background: $offerGradientNormal;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    &--premium {
+                        background: $offerGradientPremium;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
+
+
 
                 .columnOfferPlans__price {
                     font-family: $secondFont;
@@ -147,6 +250,18 @@
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
 
+                    &--standard {
+                        background: $offerGradientNormal;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    &--premium {
+                        background: $offerGradientPremium;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
                     .columnOfferPlans__listElement {
                         margin: 3px 0;
                         width: 100%;
@@ -157,6 +272,7 @@
                         background-color: rgba($color: #000000, $alpha: .2);
                     }
                 }
+
 
                 .columnOfferPlans__btn {
                     border-radius: 10px;
@@ -172,11 +288,20 @@
                     height: 100px;
                     width: 140px;
                     background: $offerGradientBasic;
-                    z-index: -1;
+                    z-index: -99;
                     transform: rotate(-90deg);
                     border-radius: 20px;
 
+                    &--standard {
+                        background: $offerGradientNormal;
+                    }
+
+                    &--premium {
+                        background: $offerGradientPremium;
+                    }
+
                     .columnOfferPlans__stickyTypeText {
+                        font-weight: 400;
                         font-size: 25px;
                         text-align: center;
                         background: $mainGradient;
@@ -187,8 +312,8 @@
             }
 
         }
-
     }
+
 }
 
 @media (orientation: portrait) and (min-width: 360px) and (min-height: 550px) {
@@ -275,6 +400,14 @@
 
         .columnOfferPlans {
             height: 60vh;
+
+            .columnOfferPlans__swipe {
+
+                .columnOfferPlans__swipeImg {
+                    height: 90px;
+                    right: 10%;
+                }
+            }
 
             .columnOfferPlans__wrapOffer {
                 max-width: 60%;
@@ -389,6 +522,216 @@
                     }
                 }
 
+            }
+
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .wrapOffer {
+        flex-direction: row;
+
+        .columnOfferTexts {
+            width: 40vw;
+            height: 100vh;
+
+            .columnOfferTexts__article {
+                .columnOfferTexts__title {
+                    width: 70%;
+                }
+
+                .columnOfferTexts__list {
+                    display: block;
+                }
+            }
+        }
+
+        .columnOfferPlans {
+            width: 60vw;
+            height: 100vh;
+
+            .columnOfferPlans__wrapOffer {
+                max-width: 80%;
+                transform: scale(.8);
+            }
+        }
+
+    }
+}
+
+@media (orientation: landscape) and (min-height:360px) {
+    .wrapOffer {
+
+        .columnOfferPlans {
+
+            .columnOfferPlans__wrapOffer {
+                transform: scale(1);
+            }
+        }
+
+    }
+}
+
+
+@media (orientation: landscape) and (min-width: 1024px) {
+
+    .wrapOffer {
+        .columnOfferTexts {
+
+            .columnOfferTexts__article {
+
+                .columnOfferTexts__title {
+                    font-size: 40px;
+                }
+
+                .columnOfferTexts__subTitle {
+                    font-size: 35px;
+                    margin: 2% 0;
+                }
+
+                .columnOfferTexts__list {
+
+
+                    .columnOfferTexts__listElement {
+                        font-size: 15px;
+
+                        .columnOfferTexts__listElementImg {
+                            height: 23px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .columnOfferPlans {
+
+            .columnOfferPlans__swipe {
+                display: none;
+            }
+
+            .columnOfferPlans__wrapOffer {
+
+                .columnOfferPlans__offer {
+                    padding: 30px 20px 30px;
+                    margin: 0 5%;
+                    max-width: 30%;
+                    min-width: 30%;
+                    display: flex;
+
+                    .columnOfferPlans__price {
+                        font-size: 45px;
+                    }
+
+
+                    .columnOfferPlans__description {
+                        font-size: 10px;
+                        margin: 15px 0;
+                    }
+
+                    .columnOfferPlans__list {
+
+                        .columnOfferPlans__listElement {
+                            font-size: 12px;
+                            margin: 5px 0;
+                            padding: 8px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+
+    .wrapOffer {
+        .columnOfferTexts {
+
+            .columnOfferTexts__article {
+
+                .columnOfferTexts__title {
+                    font-size: 60px;
+                }
+
+                .columnOfferTexts__subTitle {
+                    font-size: 45px;
+                    margin: 2% 0;
+                }
+
+                .columnOfferTexts__list {
+
+
+                    .columnOfferTexts__listElement {
+                        font-size: 18px;
+                        margin: 10px 0;
+
+                        .columnOfferTexts__listElementImg {
+                            height: 23px;
+                        }
+                    }
+                }
+
+
+                .columnOfferPlans__stickyType {
+                    top: 70px;
+                    left: -90px;
+                    height: 150px;
+                    width: 210px;
+
+                    .columnOfferPlans__stickyTypeText {
+                        font-size: 30px;
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1600px) {
+
+    .wrapOffer {
+        .columnOfferTexts {
+
+            .columnOfferTexts__article {
+
+                .columnOfferTexts__title {
+                    font-size: 75px;
+                }
+
+                .columnOfferTexts__subTitle {
+                    font-size: 60px;
+                    margin: 2% 0;
+                }
+
+                .columnOfferTexts__list {
+
+
+                    .columnOfferTexts__listElement {
+                        font-size: 20px;
+
+                        .columnOfferTexts__listElementImg {
+                            height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .columnOfferPlans {
+
+            .columnOfferPlans__wrapOffer {
+                margin-left: 5%;
+
+                .columnOfferPlans__offer {
+                    margin: 0 40px;
+                    min-width: 30%;
+                }
             }
 
         }

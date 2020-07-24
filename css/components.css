@@ -46,6 +46,24 @@
           animation: slideDown 1.7s linear infinite;
 }
 
+@media (min-width: 768px) {
+  .icon {
+    width: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    width: 100px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .icon {
+    width: 120px;
+  }
+}
+
 .button {
   font-size: 14px;
   letter-spacing: 1px;

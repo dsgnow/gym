@@ -112,6 +112,27 @@
     }
 }
 
+@keyframes navBasic {
+    0% {
+        width: 65%;
+    }
+
+    100% {
+        width: 70%;
+    }
+}
+
+
+@keyframes navSmall {
+    0% {
+        width: 70%;
+    }
+
+    100% {
+        width: 65%;
+    }
+}
+
 header {
     .nav {
         display: none;
@@ -120,11 +141,26 @@ header {
         left: 50%;
         transform: translate(-50%, 0);
         z-index: 9999;
-        width: 50%;
+        width: 70%;
         transition: .3s ease-in-out;
-        background-color: rgba(11, 11, 13, 0.3);
         font-family: $mainFont;
         text-transform: uppercase;
+        transition: .3s;
+
+        &--solidBgc {
+            background: linear-gradient(240deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%);
+        }
+
+        &--transBgc {
+            background-color: rgba(11, 11, 13, 0.3);
+            animation: navSmall .3s;
+            animation-fill-mode: forwards;
+        }
+
+        &--basic {
+            animation: navBasic .3s;
+            animation-fill-mode: forwards;
+        }
 
 
         .nav__list {
@@ -144,9 +180,11 @@ header {
             justify-content: center;
             align-items: center;
             width: 20%;
+            position: relative;
 
             .nav__logo {
                 height: 40%;
+
             }
         }
 
@@ -160,20 +198,6 @@ header {
             width: 100%;
             transition: .3s;
             border-bottom: 2px solid transparent;
-
-            &--black {
-                color: black;
-            }
-
-            &--selected {
-                animation: addBorderLink ease-in .4s;
-                animation-fill-mode: forwards;
-            }
-
-            &--selected.nav__link--black {
-                animation: addBorderLinkBlack ease-in .4s;
-                animation-fill-mode: forwards;
-            }
         }
 
         .nav__link:hover {
@@ -493,7 +517,7 @@ header {
     header {
         .nav {
             display: flex;
-            width: 50%;
+            width: 70%;
         }
     }
 }

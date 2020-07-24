@@ -16,6 +16,7 @@
     }
 }
 
+
 @keyframes slideChange1 {
     0% {
         transform: translate3d(0px, 0px, 0px);
@@ -31,6 +32,44 @@
     100% {
         transform: translate3d(0px, 0px, 0px);
         z-index: 999;
+    }
+}
+
+@media (orientation: landscape) and (max-height:359px) {
+    @keyframes slideChange {
+        0% {
+            transform: scale(.8) translate3d(0px, 0px, 0px);
+            z-index: 999;
+
+        }
+
+        50% {
+            transform: scale(.8) translate3d(-20px, 0px, 0px);
+            z-index: 999;
+        }
+
+        100% {
+            transform: scale(.8) translate3d(0px, 0px, 0px);
+            z-index: 999;
+        }
+    }
+
+    @keyframes slideChange1 {
+        0% {
+            transform: scale(.8) translate3d(0px, 0px, 0px);
+            z-index: 999;
+
+        }
+
+        50% {
+            transform: scale(.8) translate3d(-20px, 0px, 0px);
+            z-index: 999;
+        }
+
+        100% {
+            transform: scale(.8) translate3d(0px, 0px, 0px);
+            z-index: 999;
+        }
     }
 }
 
@@ -551,27 +590,31 @@
             width: 60vw;
             height: 100vh;
 
+            .columnOfferPlans__swipe {
+
+                .columnOfferPlans__swipeImg {
+                    right: 5%;
+                }
+            }
+
             .columnOfferPlans__wrapOffer {
                 max-width: 80%;
-                transform: scale(.8);
             }
         }
 
     }
 }
 
-@media (orientation: landscape) and (min-height:360px) {
-    .wrapOffer {
+// @media (orientation: landscape) and (min-height:360px) {
+//     .wrapOffer {
 
-        .columnOfferPlans {
+//         .columnOfferPlans {
 
-            .columnOfferPlans__wrapOffer {
-                transform: scale(1);
-            }
-        }
+//             .columnOfferPlans__wrapOffer {}
+//         }
 
-    }
-}
+//     }
+// }
 
 
 @media (orientation: landscape) and (min-width: 1024px) {
@@ -731,9 +774,29 @@
                 .columnOfferPlans__offer {
                     margin: 0 40px;
                     min-width: 30%;
+
+
+                    .columnOfferPlans__price {
+                        font-size: 70px;
+                    }
+
+
+                    .columnOfferPlans__description {
+                        font-size: 13px;
+                        margin: 12px 0;
+                    }
+
+                    .columnOfferPlans__list {
+
+                        .columnOfferPlans__listElement {
+                            font-size: 15px;
+                            margin: 5px 0;
+                            padding: 8px;
+                            text-align: center;
+                        }
+                    }
                 }
             }
-
         }
     }
 }

@@ -15,6 +15,15 @@ if (mql.matches) {
     $hambSpan.addClass('navBurger__span--white');
 }
 
+$('nav a').on('click', function (e) {
+    e.preventDefault();
+    const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    }, 500)
+
+})
+
 $('.navBurger a').on('click', function () {
     hambActiveFlag = !hambActiveFlag;
     $hambButton.toggleClass('navBurger__btn--active');
@@ -39,6 +48,45 @@ $('.navBurger__btn').on('click', function (e) {
     $hambPop.toggleClass('navBurger--show');
     $hambPop.toggleClass('navBurger--hide');
     $hambPop.show();
+})
+
+// changes on scrolll //
+$(window).on('scroll', function () {
+
+    var isSafari = window.safari !== undefined;
+    let bodyelem = '';
+
+    if (isSafari) {
+        bodyelem = $("body");
+    } else {
+        bodyelem = window;
+    }
+
+
+    const windowHeight = $(bodyelem).height();
+    const scrollValue = $(bodyelem).scrollTop();
+
+    const nav = document.querySelector('nav');
+    // change nav color //
+    if ((scrollValue < 50)) {
+        nav.classList.remove('nav--transBgc');
+        nav.classList.add('nav--basic');
+
+    } else if ((scrollValue < windowHeight)) {
+        nav.classList.add('nav--transBgc');
+        nav.classList.remove('nav--basic');
+
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 2)) {
+        nav.classList.remove('nav--solidBgc');
+
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
+        nav.classList.add('nav--solidBgc');
+
+    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
+        nav.classList.remove('nav--solidBgc');
+    }
+
+
 })
 
 // swipe event //
@@ -98,9 +146,9 @@ class Swipe {
             }
         } else {
             if (this.yDiff > 0) {
-                this.onUp();
+                // this.onUp();
             } else {
-                this.onDown();
+                // this.onDown();
             }
         }
 
@@ -159,3 +207,7 @@ swiper.onRight(function () {
 });
 
 swiper.run();
+
+
+// var image = document.getElementsByClassName('columnAboutImages__imgTrainer');
+// new simpleParallax(image);

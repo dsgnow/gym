@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <nav class="nav">
+        <nav class="nav nav--basic">
             <ul class="nav__list">
                 <li class="nav__element">
                     <a class="nav__link nav__link--start nav__link--selected" data-section="nav__link--start"
@@ -56,7 +56,7 @@
         </div>
     </header>
     <main>
-        <div class="wrapStart">
+        <div class="wrapStart" data-sectionin="nav__link--start">
             <section class="columnImages">
                 <span class="columnImages__slideDown slideDown">
                     <img class="columnImages__icon icon" src="img/slideDown.svg" alt="white cross">
@@ -80,7 +80,7 @@
                 </span>
             </section>
         </div>
-        <div class="wrapAbout">
+        <div class="wrapAbout" data-sectionin="nav__link--about">
             <section class="columnAboutTexts">
                 <img class="columnAboutTexts__imgCrossWhite imgCrossWhite" src="img/crossWhite.svg" alt="white cross">
                 <img class="columnAboutTexts__imgCrossBlue imgCrossBlue" src="img/crossBlue.svg" alt="blue cross">
@@ -109,7 +109,7 @@
             </section>
         </div>
 
-        <div class="wrapOffer">
+        <div class="wrapOffer" data-sectionin="nav__link--plan">
             <section class="columnOfferTexts">
                 <img class="columnOfferTexts__imgCrossWhite imgCrossWhite" src="img/crossWhite.svg" alt="white cross">
                 <img class="columnOfferTexts__imgCrossBlue imgCrossBlue" src="img/crossBlue.svg" alt="blue cross">
@@ -198,6 +198,7 @@
         </div>
     </main>
     <script src="https://kit.fontawesome.com/4b11486782.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>

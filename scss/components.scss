@@ -39,6 +39,18 @@
             color: white;
             transform: scaleX(2);
             animation: slideDown 1.7s linear infinite;
+
+            @media (min-width:768px) {
+                width: 80px;
+            }
+
+            @media (min-width: 1024px) {
+                width: 100px;
+            }
+
+            @media (min-width: 1400px) {
+                width: 120px;
+            }
         }
 
         .button {

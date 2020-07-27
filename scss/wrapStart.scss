@@ -105,7 +105,7 @@
         min-height: 200px;
         min-width: 200px;
 
-        .columnImages__imgRunner {
+        &__imgRunner {
             width: 75%;
             z-index: 1;
             transform: translateX(0%);
@@ -113,7 +113,7 @@
             animation-fill-mode: forwards;
         }
 
-        .columnImages__imgTriangle {
+        &__imgTriangle {
             position: absolute;
             width: 80%;
             animation: rotate linear 170s infinite;
@@ -133,19 +133,19 @@
         min-height: 250px;
         min-width: 200px;
 
-        .columnTexts__blockTypography {
+        &__blockTypography {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
-        .columnTexts__imgText {
+        &__imgText {
             margin-top: 30px;
             width: 70%;
         }
 
-        .columnTexts__descriptionText {
+        &__descriptionText {
             font-family: $secondFont;
             font-size: 12px;
             font-weight: 300;
@@ -164,13 +164,13 @@
     .wrapStart {
 
         .columnImages {
-            .columnImages__imgRunner {
+            &__imgRunner {
                 width: 85%;
             }
         }
 
         .columnTexts {
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 font-size: 14px;
             }
         }
@@ -182,17 +182,17 @@
 @media (min-width: 768px) and (orientation: portrait) {
     .wrapStart {
         .columnImages {
-            .columnImages__imgRunner {
+            &__imgRunner {
                 width: 80%;
             }
 
-            .columnImages__icon {
+            &__icon {
                 width: 80px;
             }
         }
 
         .columnTexts {
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 font-size: 20px;
                 line-height: 1.3;
             }
@@ -205,13 +205,13 @@
 @media (min-width: 1024px) and (orientation: portrait) {
     .wrapStart {
         .columnTexts {
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 width: 50%;
                 font-size: 25px;
                 line-height: 1.3;
             }
 
-            .columnImages__icon {
+            &__icon {
                 width: 100px;
             }
         }
@@ -230,7 +230,7 @@
             min-height: 200px;
             min-width: 200px;
 
-            .columnImages__imgRunner {
+            &__imgRunner {
                 width: 90%;
             }
 
@@ -243,15 +243,15 @@
             min-height: 600px;
             min-width: 200px;
 
-            .columnTexts__blockTypography {
+            &__blockTypography {
                 margin-top: -10%;
             }
 
-            .columnTexts__imgText {
+            &__imgText {
                 width: 80%;
             }
 
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 font-size: 11px;
                 line-height: 1.3;
                 width: 80%;
@@ -267,7 +267,7 @@
         flex-direction: row;
 
         .columnTexts {
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 font-size: 20px;
                 line-height: 1.1;
                 margin: 50px 0;
@@ -282,7 +282,7 @@
         flex-direction: row;
 
         .columnTexts {
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 font-size: 24px;
                 margin: 50px 0;
             }
@@ -297,22 +297,22 @@
         .columnImages {
             transform: translateX(10%);
 
-            .columnImages__imgRunner {
+            &__imgRunner {
                 width: 90%;
             }
 
-            .columnImages__icon {
+            &__icon {
                 width: 120px;
             }
         }
 
         .columnTexts {
 
-            .columnTexts__imgText {
+            &__imgText {
                 width: 70%;
             }
 
-            .columnTexts__descriptionText {
+            &__descriptionText {
                 width: 60%;
             }
 

@@ -165,6 +165,8 @@ class Swipe {
 }
 
 const swiper = new Swipe('.columnOfferPlans__wrapOffer');
+const rightOfferClick = document.querySelector('.columnOfferPlans__navigation--right');
+const leftOfferClick = document.querySelector('.columnOfferPlans__navigation--left');
 let offers = [...document.querySelectorAll('.columnOfferPlans__offer')];
 
 const clearSwipe = function () {
@@ -178,10 +180,7 @@ const clearSwipe = function () {
     document.querySelector('.columnOfferPlans__wrapOffer').classList.toggle('columnOfferPlans__wrapOffer--active');
 }
 
-swiper.onLeft(function () {
-
-    clearSwipe();
-
+const turnRight = function () {
     if (planIndex !== offers.length - 1) {
         offers[planIndex + 1].classList.add('columnOfferPlans__offer--active');
         planIndex++;
@@ -189,13 +188,9 @@ swiper.onLeft(function () {
         offers[0].classList.add('columnOfferPlans__offer--active');
         planIndex++;
     }
+}
 
-});
-
-swiper.onRight(function () {
-
-    clearSwipe();
-
+const turnLeft = function () {
     if (planIndex !== 0) {
         offers[planIndex - 1].classList.add('columnOfferPlans__offer--active');
         planIndex--;
@@ -203,10 +198,29 @@ swiper.onRight(function () {
         offers[2].classList.add('columnOfferPlans__offer--active');
         planIndex == 2;
     }
+}
 
+swiper.onLeft(function () {
+    clearSwipe();
+    turnRight();
+});
+
+swiper.onRight(function () {
+    clearSwipe();
+    turnLeft();
 });
 
 swiper.run();
+
+rightOfferClick.addEventListener('click', function () {
+    clearSwipe();
+    turnRight();
+});
+
+leftOfferClick.addEventListener('click', function () {
+    clearSwipe();
+    turnLeft();
+});
 
 
 // var image = document.getElementsByClassName('columnAboutImages__imgTrainer');

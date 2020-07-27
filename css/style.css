@@ -423,7 +423,7 @@
   }
 }
 
-header .nav {
+.nav {
   display: none;
   position: fixed;
   top: 0%;
@@ -440,11 +440,11 @@ header .nav {
   transition: .3s;
 }
 
-header .nav--solidBgc {
+.nav--solidBgc {
   background: linear-gradient(240deg, #1e365d 11%, #0f1d37 53%, #0b1932 100%);
 }
 
-header .nav--transBgc {
+.nav--transBgc {
   background-color: rgba(11, 11, 13, 0.3);
   -webkit-animation: navSmall .3s;
           animation: navSmall .3s;
@@ -452,14 +452,14 @@ header .nav--transBgc {
           animation-fill-mode: forwards;
 }
 
-header .nav--basic {
+.nav--basic {
   -webkit-animation: navBasic .3s;
           animation: navBasic .3s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-header .nav .nav__list {
+.nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,7 +479,7 @@ header .nav .nav__list {
   width: 100%;
 }
 
-header .nav .nav__element {
+.nav__element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,11 +497,7 @@ header .nav .nav__element {
   position: relative;
 }
 
-header .nav .nav__element .nav__logo {
-  height: 40%;
-}
-
-header .nav .nav__link {
+.nav__link {
   text-decoration: none;
   display: block;
   text-align: center;
@@ -514,13 +510,17 @@ header .nav .nav__link {
   border-bottom: 2px solid transparent;
 }
 
-header .nav .nav__link:hover {
+.nav__link:hover {
   font-weight: 500;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-header .navBurger {
+.nav__logo {
+  height: 40%;
+}
+
+.navBurger {
   display: none;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -537,21 +537,21 @@ header .navBurger {
   box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
 }
 
-header .navBurger--show {
+.navBurger--show {
   -webkit-animation: showFromTop 1s;
           animation: showFromTop 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-header .navBurger--hide {
+.navBurger--hide {
   -webkit-animation: hideFromTop 1s;
           animation: hideFromTop 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-header .navBurger .navBurger__list {
+.navBurger__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,7 +570,7 @@ header .navBurger .navBurger__list {
   font-size: 25px;
 }
 
-header .navBurger .navBurger__element {
+.navBurger__element {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,21 +588,21 @@ header .navBurger .navBurger__element {
   height: 12vh;
 }
 
-header .navBurger .navBurger__element .navBurger__logo {
-  height: 40%;
-}
-
-header .navBurger .navBurger__element:nth-child(1) {
+.navBurger__element:nth-child(1) {
   background-color: #0b1932;
 }
 
-header .navBurger .navBurger__element:hover .navBurger__link {
+.navBurger__element:hover .navBurger__link {
   font-weight: 500;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-header .navBurger .navBurger__link {
+.navBurger__logo {
+  height: 40%;
+}
+
+.navBurger__link {
   color: black;
   width: 100%;
   -webkit-transition: .3s;
@@ -614,11 +614,11 @@ header .navBurger .navBurger__link {
   line-height: 12vh;
 }
 
-header .navBurger .navBurger__logo {
+.navBurger__logo {
   height: 60%;
 }
 
-header .navBurger__box {
+.navBurgerBox {
   position: fixed;
   top: 10px;
   right: 10px;
@@ -630,7 +630,7 @@ header .navBurger__box {
   z-index: 9999;
 }
 
-header .navBurger__box .navBurger__btn .navBurger__span {
+.navBurgerBox__span {
   display: block;
   width: 100%;
   -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
@@ -643,44 +643,44 @@ header .navBurger__box .navBurger__btn .navBurger__span {
   float: right;
 }
 
-header .navBurger__box .navBurger__btn .navBurger__span--black {
+.navBurgerBox__span--black {
   background: #222 !important;
 }
 
-header .navBurger__box .navBurger__btn .navBurger__span--white {
+.navBurgerBox__span--white {
   background: white;
 }
 
-header .navBurger__box .navBurger__btn .navBurger__span + .navBurger__span {
+.navBurgerBox__span + .navBurgerBox__span {
   margin-top: 3px;
 }
 
-header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(1) {
+.navBurgerBox__btn--active .navBurgerBox__span:nth-child(1) {
   -webkit-animation: ease .7s top forwards;
           animation: ease .7s top forwards;
 }
 
-header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(1) {
+.navBurgerBox__btn--notActive .navBurgerBox__span:nth-child(1) {
   -webkit-animation: ease .7s top-2 forwards;
           animation: ease .7s top-2 forwards;
 }
 
-header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(2) {
+.navBurgerBox__btn--active .navBurgerBox__span:nth-child(2) {
   -webkit-animation: ease .7s scaled forwards;
           animation: ease .7s scaled forwards;
 }
 
-header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(2) {
+.navBurgerBox__btn--notActive .navBurgerBox__span:nth-child(2) {
   -webkit-animation: ease .7s scaled-2 forwards;
           animation: ease .7s scaled-2 forwards;
 }
 
-header .navBurger__box .navBurger__btn--active .navBurger__span:nth-child(3) {
+.navBurgerBox__btn--active .navBurgerBox__span:nth-child(3) {
   -webkit-animation: ease .7s bottom forwards;
           animation: ease .7s bottom forwards;
 }
 
-header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) {
+.navBurgerBox__btn--notActive .navBurgerBox__span:nth-child(3) {
   -webkit-animation: ease .7s bottom-2 forwards;
           animation: ease .7s bottom-2 forwards;
 }
@@ -822,73 +822,72 @@ header .navBurger__box .navBurger__btn--notActive .navBurger__span:nth-child(3) 
               transform: rotate(0);
     }
   }
-  header .navBurger .navBurger__list {
+}
+
+@media (min-width: 768px) and (orientation: portrait) {
+  .navBurger__list {
     font-size: 35px;
   }
-  header .navBurger__box {
+  .navBurgerBox {
     top: 20px;
     right: 20px;
     width: 70px;
     padding: 5px;
   }
-  header .navBurger__box .navBurger__btn {
-    height: auto;
-    width: auto;
-  }
-  header .navBurger__box .navBurger__btn .navBurger__span {
+  .navBurgerBox__span {
     height: 6px;
   }
-  header .navBurger__box .navBurger__btn .navBurger__span + .navBurger__span {
+  .navBurgerBox__span + .navBurgerBox__span {
     margin-top: 4px;
   }
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
-  header .navBurger .navBurger__list {
+  .navBurger__list {
     font-size: 55px;
   }
-  header .navBurger__box {
+  .navBurgerBox {
     top: 40px;
     right: 40px;
   }
 }
 
 @media (orientation: landscape) {
-  header .navBurger {
+  .navBurger {
     height: 100vh;
   }
-  header .navBurger .navBurger__list {
+  .navBurger__list {
     font-size: 25px;
   }
-  header .navBurger .navBurger__element {
+  .navBurger__element {
     height: 20vh;
   }
-  header .navBurger .navBurger__link {
+  .navBurger__link {
     line-height: 20vh;
   }
 }
 
 @media (orientation: landscape) and (min-width: 1024px) {
-  header .nav {
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 70%;
   }
-  header .nav .nav__list {
+  .nav__list {
     padding: 10px 15px;
     font-size: 15px;
   }
-  header .navBurger {
+  .navBurger {
     display: none;
   }
-  header .navBurger__box {
+  .navBurgerBox {
     display: none;
   }
 }
 
 @media (orientation: landscape) and (min-width: 1400px) {
-  header .nav {
+  .nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

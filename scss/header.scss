@@ -133,218 +133,214 @@
     }
 }
 
-header {
-    .nav {
-        display: none;
-        position: fixed;
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        z-index: 9999;
-        width: 70%;
-        transition: .3s ease-in-out;
-        font-family: $mainFont;
-        text-transform: uppercase;
+.nav {
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9999;
+    width: 70%;
+    transition: .3s ease-in-out;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    transition: .3s;
+
+    &--solidBgc {
+        background: linear-gradient(240deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%);
+    }
+
+    &--transBgc {
+        background-color: rgba(11, 11, 13, 0.3);
+        animation: navSmall .3s;
+        animation-fill-mode: forwards;
+    }
+
+    &--basic {
+        animation: navBasic .3s;
+        animation-fill-mode: forwards;
+    }
+
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 10px 15px;
+        font-size: 15px;
+        width: 100%;
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        position: relative;
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+        line-height: 30px;
+        width: 100%;
         transition: .3s;
-
-        &--solidBgc {
-            background: linear-gradient(240deg, rgba(30, 54, 93, 1) 11%, rgba(15, 29, 55, 1) 53%, rgba(11, 25, 50, 1) 100%);
-        }
-
-        &--transBgc {
-            background-color: rgba(11, 11, 13, 0.3);
-            animation: navSmall .3s;
-            animation-fill-mode: forwards;
-        }
-
-        &--basic {
-            animation: navBasic .3s;
-            animation-fill-mode: forwards;
-        }
-
-
-        .nav__list {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            padding: 10px 15px;
-            font-size: 15px;
-            width: 100%;
-        }
-
-        .nav__element {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            width: 20%;
-            position: relative;
-
-            .nav__logo {
-                height: 40%;
-
-            }
-        }
-
-        .nav__link {
-            text-decoration: none;
-            display: block;
-            text-align: center;
-            margin: 0 auto;
-            color: white;
-            line-height: 30px;
-            width: 100%;
-            transition: .3s;
-            border-bottom: 2px solid transparent;
-        }
-
-        .nav__link:hover {
-            font-weight: 500;
-            transform: scale(1.1);
-        }
-
+        border-bottom: 2px solid transparent;
     }
 
-    .navBurger {
-        display: none;
-        transform: translateY(-50%);
-        position: fixed;
-        top: unset;
-        right: unset;
-        width: 100vw;
-        height: 60vh;
-        font-family: $mainFont;
-        text-transform: uppercase;
-        background-color: white;
-        z-index: 9999;
-        -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-
-        &--show {
-            animation: showFromTop 1s;
-            animation-fill-mode: forwards;
-        }
-
-        &--hide {
-            animation: hideFromTop 1s;
-            animation-fill-mode: forwards;
-        }
-
-        .navBurger__list {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;
-            flex-direction: column;
-            padding: 0;
-            font-size: 25px;
-        }
-
-        .navBurger__element {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            width: 100%;
-            height: 12vh;
-
-            .navBurger__logo {
-                height: 40%;
-            }
-        }
-
-        .navBurger__element:nth-child(1) {
-            background-color: rgba(11, 25, 50, 1);
-        }
-
-        .navBurger__element:hover .navBurger__link {
-            font-weight: 500;
-            transform: scale(1.1);
-        }
-
-        .navBurger__link {
-            color: black;
-            width: 100%;
-            transition: .3s;
-            font-weight: 500;
-            text-decoration: none;
-            text-align: center;
-            height: 100%;
-            line-height: 12vh;
-        }
-
-        .navBurger__logo {
-            height: 60%;
-        }
-
+    &__link:hover {
+        font-weight: 500;
+        transform: scale(1.1);
     }
 
-    .navBurger__box {
-        position: fixed;
-        top: 10px;
-        right: 10px;
-        width: 45px;
-        cursor: pointer;
-        padding: 5px;
-        transition: .3s ease-in-out;
-        z-index: 9999;
-
-        .navBurger__btn {
-
-            .navBurger__span {
-                display: block;
-                width: 100%;
-                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
-                height: 3px;
-                background: #222;
-                transition: all .3s;
-                position: relative;
-                float: right;
-
-                &--black {
-                    background: #222 !important;
-                }
-
-                &--white {
-                    background: white;
-                }
-            }
-
-            .navBurger__span+.navBurger__span {
-                margin-top: 3px;
-            }
-
-            &--active .navBurger__span:nth-child(1) {
-                animation: ease .7s top forwards;
-            }
-
-            &--notActive .navBurger__span:nth-child(1) {
-                animation: ease .7s top-2 forwards;
-            }
-
-            &--active .navBurger__span:nth-child(2) {
-                animation: ease .7s scaled forwards;
-            }
-
-            &--notActive .navBurger__span:nth-child(2) {
-                animation: ease .7s scaled-2 forwards;
-            }
-
-            &--active .navBurger__span:nth-child(3) {
-                animation: ease .7s bottom forwards;
-            }
-
-            &--notActive .navBurger__span:nth-child(3) {
-                animation: ease .7s bottom-2 forwards;
-            }
-
-        }
+    &__logo {
+        height: 40%;
     }
 
 }
+
+.navBurger {
+    display: none;
+    transform: translateY(-50%);
+    position: fixed;
+    top: unset;
+    right: unset;
+    width: 100vw;
+    height: 60vh;
+    font-family: $mainFont;
+    text-transform: uppercase;
+    background-color: white;
+    z-index: 9999;
+    -webkit-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+
+    &--show {
+        animation: showFromTop 1s;
+        animation-fill-mode: forwards;
+    }
+
+    &--hide {
+        animation: hideFromTop 1s;
+        animation-fill-mode: forwards;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 0;
+        font-size: 25px;
+    }
+
+    &__element {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        height: 12vh;
+    }
+
+    &__element:nth-child(1) {
+        background-color: rgba(11, 25, 50, 1);
+    }
+
+    &__element:hover .navBurger__link {
+        font-weight: 500;
+        transform: scale(1.1);
+    }
+
+    &__logo {
+        height: 40%;
+    }
+
+    &__link {
+        color: black;
+        width: 100%;
+        transition: .3s;
+        font-weight: 500;
+        text-decoration: none;
+        text-align: center;
+        height: 100%;
+        line-height: 12vh;
+    }
+
+    &__logo {
+        height: 60%;
+    }
+
+}
+
+.navBurgerBox {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 45px;
+    cursor: pointer;
+    padding: 5px;
+    transition: .3s ease-in-out;
+    z-index: 9999;
+
+
+    &__span {
+        display: block;
+        width: 100%;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+        height: 3px;
+        background: #222;
+        transition: all .3s;
+        position: relative;
+        float: right;
+
+        &--black {
+            background: #222 !important;
+        }
+
+        &--white {
+            background: white;
+        }
+    }
+
+    &__span+&__span {
+        margin-top: 3px;
+    }
+
+    &__btn--active &__span:nth-child(1) {
+        animation: ease .7s top forwards;
+    }
+
+    &__btn--notActive &__span:nth-child(1) {
+        animation: ease .7s top-2 forwards;
+    }
+
+    &__btn--active &__span:nth-child(2) {
+        animation: ease .7s scaled forwards;
+    }
+
+    &__btn--notActive &__span:nth-child(2) {
+        animation: ease .7s scaled-2 forwards;
+    }
+
+    &__btn--active &__span:nth-child(3) {
+        animation: ease .7s bottom forwards;
+    }
+
+    &__btn--notActive &__span:nth-child(3) {
+        animation: ease .7s bottom-2 forwards;
+    }
+
+
+}
+
 
 @media (min-width: 768px) and (orientation: portrait) {
     @keyframes top {
@@ -415,109 +411,95 @@ header {
         }
     }
 
+}
 
+@media (min-width: 768px) and (orientation: portrait) {
 
-    header {
+    .navBurger__list {
+        font-size: 35px;
+    }
 
-        .navBurger {
+    .navBurgerBox {
+        top: 20px;
+        right: 20px;
+        width: 70px;
+        padding: 5px;
 
-            .navBurger__list {
-                font-size: 35px;
-            }
-
+        &__span {
+            height: 6px;
         }
 
-        .navBurger__box {
-            top: 20px;
-            right: 20px;
-            width: 70px;
-            padding: 5px;
-
-            .navBurger__btn {
-                height: auto;
-                width: auto;
-
-                .navBurger__span {
-                    height: 6px;
-                }
-
-                .navBurger__span+.navBurger__span {
-                    margin-top: 4px;
-                }
-            }
+        &__span+&__span {
+            margin-top: 4px;
         }
 
     }
+
 }
 
+
+
+
 @media (min-width: 1024px) and (orientation: portrait) {
-    header {
-        .navBurger {
 
-            .navBurger__list {
-                font-size: 55px;
-            }
+    .navBurger__list {
+        font-size: 55px;
+    }
 
-        }
-
-        .navBurger__box {
-            top: 40px;
-            right: 40px;
-
-        }
+    .navBurgerBox {
+        top: 40px;
+        right: 40px;
 
     }
 }
 
 @media (orientation: landscape) {
-    header {
-        .navBurger {
-            height: 100vh;
 
-            .navBurger__list {
-                font-size: 25px;
-            }
+    .navBurger {
+        height: 100vh;
 
-            .navBurger__element {
-                height: 20vh;
-            }
-
-            .navBurger__link {
-                line-height: 20vh;
-            }
+        &__list {
+            font-size: 25px;
         }
 
+        &__element {
+            height: 20vh;
+        }
+
+        &__link {
+            line-height: 20vh;
+        }
     }
+
 }
+
 
 @media (orientation: landscape) and (min-width:1024px) {
-    header {
-        .nav {
-            display: flex;
-            width: 70%;
 
-            .nav__list {
-                padding: 10px 15px;
-                font-size: 15px;
-            }
+    .nav {
+        display: flex;
+        width: 70%;
+
+        &__list {
+            padding: 10px 15px;
+            font-size: 15px;
         }
-
-        .navBurger {
-            display: none;
-        }
-
-        .navBurger__box {
-            display: none;
-        }
-
     }
+
+    .navBurger {
+        display: none;
+    }
+
+    .navBurgerBox {
+        display: none;
+    }
+
 }
 
+
 @media (orientation: landscape) and (min-width:1400px) {
-    header {
-        .nav {
-            display: flex;
-            width: 70%;
-        }
+    .nav {
+        display: flex;
+        width: 70%;
     }
 }

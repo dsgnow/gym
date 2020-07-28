@@ -1001,31 +1001,31 @@
 
 @-webkit-keyframes runnerIn {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
   }
   1% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(-8%);
-            transform: translateX(-8%);
+    -webkit-transform: translateX(-8%) rotate(5deg);
+            transform: translateX(-8%) rotate(5deg);
   }
 }
 
 @keyframes runnerIn {
   0% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translateX(-50%) rotate(0deg);
+            transform: translateX(-50%) rotate(0deg);
   }
   1% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(-8%);
-            transform: translateX(-8%);
+    -webkit-transform: translateX(-8%) rotate(5deg);
+            transform: translateX(-8%) rotate(5deg);
   }
 }
 

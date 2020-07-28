@@ -60,7 +60,7 @@
 
 @keyframes runnerIn {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-50%) rotate(0deg);
     }
 
     1% {
@@ -68,7 +68,7 @@
     }
 
     100% {
-        transform: translateX(-8%);
+        transform: translateX(-8%) rotate(5deg);
     }
 }
 

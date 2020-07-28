@@ -1928,6 +1928,7 @@
   width: 20vw;
   position: absolute;
   bottom: 0;
+  cursor: pointer;
 }
 
 .wrapOffer .columnOfferPlans__navigation--right {
@@ -1936,10 +1937,18 @@
           animation: slideHand 2s ease-out infinite normal;
 }
 
+.wrapOffer .columnOfferPlans__navigation--right:hover .columnOfferPlans__navigationElementRight {
+  color: grey;
+}
+
 .wrapOffer .columnOfferPlans__navigation--left {
   left: 0;
   -webkit-animation: slideHandLeft 2s ease-out infinite normal;
           animation: slideHandLeft 2s ease-out infinite normal;
+}
+
+.wrapOffer .columnOfferPlans__navigation--left:hover .columnOfferPlans__navigationElementLeft {
+  color: grey;
 }
 
 .wrapOffer .columnOfferPlans__navigationElementRight, .wrapOffer .columnOfferPlans__navigationElementLeft {
@@ -2515,6 +2524,7 @@
 
 .wrapContact .localization__logo {
   height: 20px;
+  margin-bottom: 20px;
 }
 
 .wrapContact .localization__address {

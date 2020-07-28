@@ -38,7 +38,7 @@ $('.navBurger a').on('click', function () {
     }, 500)
 })
 
-$('.navBurgerBox__btn').on('click', function (e) {
+$('.navBurgerBox').on('click', function (e) {
     hambActiveFlag = !hambActiveFlag;
     e.preventDefault();
     $hambButton.toggleClass('navBurgerBox__btn--active');

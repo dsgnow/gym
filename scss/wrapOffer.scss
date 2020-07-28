@@ -225,15 +225,24 @@
             width: 20vw;
             position: absolute;
             bottom: 0;
+            cursor: pointer;
 
             &--right {
                 right: 0;
                 animation: slideHand 2s ease-out infinite normal;
             }
 
+            &--right:hover .columnOfferPlans__navigationElementRight {
+                color: grey;
+            }
+
             &--left {
                 left: 0;
                 animation: slideHandLeft 2s ease-out infinite normal;
+            }
+
+            &--left:hover .columnOfferPlans__navigationElementLeft {
+                color: grey;
             }
         }
 

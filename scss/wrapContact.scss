@@ -13,7 +13,7 @@
 
     .contact {
         width: 100vw;
-        height: 60vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,6 +34,7 @@
 
         &__title {
             width: 60vw;
+            min-width: 250px;
             padding: 5px 15px;
             margin-bottom: 8px;
             background: rgb(30, 54, 93);
@@ -50,6 +51,7 @@
         &__dropdown,
         &__message {
             width: 60vw;
+            min-width: 250px;
             font-family: $mainFont;
             padding: 4px;
             margin: 4px;
@@ -66,14 +68,14 @@
 
     .localization {
         width: 100vw;
-        height: 40vh;
+        height: 30vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         position: relative;
         min-height: 200px;
-        min-width: 300px;
+        min-width: 200px;
         font-family: $mainFont;
         color: white;
 
@@ -95,8 +97,7 @@
         }
 
         &__logo {
-            height: 30px;
-            margin-top: 20px;
+            height: 20px;
         }
 
         &__address {
@@ -106,7 +107,7 @@
             align-items: center;
             font-style: normal;
             text-align: center;
-            font-size: 20px;
+            font-size: 18px;
             width: 65%;
         }
 
@@ -117,10 +118,263 @@
         }
 
         &__hr {
-            width: 100%;
-            margin-bottom: 10px;
+            width: 80%;
+            margin-bottom: 8px;
+            margin-top: -10px;
         }
 
     }
 
+}
+
+@media (orientation:portrait) and (min-width: 768px) {
+    .wrapContact {
+
+        .contact {
+            &__title {
+                width: 60vw;
+                font-size: 35px;
+            }
+
+            &__dropdownLabel {
+                font-size: 20px;
+            }
+
+            &__name,
+            &__email,
+            &__dropdown,
+            &__message {
+                width: 60vw;
+                font-size: 25px;
+                margin: 10px 0;
+            }
+        }
+
+        .localization {
+
+            &__logo {
+                height: 45px;
+            }
+
+            &__address {
+                font-size: 30px;
+            }
+
+        }
+    }
+}
+
+@media (orientation:portrait) and (min-width: 1024px) {
+    .wrapContact {
+
+        .contact {
+            &__title {
+                width: 60vw;
+                font-size: 45px;
+            }
+
+            &__dropdownLabel {
+                font-size: 25px;
+            }
+
+            &__name,
+            &__email,
+            &__dropdown,
+            &__message {
+                width: 60vw;
+                font-size: 30px;
+                margin: 10px 0;
+            }
+        }
+
+        .localization {
+
+            &__logo {
+                height: 55px;
+            }
+
+            &__address {
+                font-size: 35px;
+            }
+
+        }
+    }
+}
+
+@media (orientation:landscape) {
+    .wrapContact {
+        flex-direction: row-reverse;
+
+        .contact {
+            width: 60vw;
+            height: 100vh;
+            min-height: 300px;
+            min-width: 300px;
+            flex-grow: 1;
+
+
+            &__title {
+                width: 40vw;
+                min-width: 250px;
+            }
+
+            &__name,
+            &__email,
+            &__dropdown,
+            &__message {
+                width: 40vw;
+                min-width: 250px;
+            }
+        }
+
+        .localization {
+            width: 40vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            min-height: 300px;
+            min-width: 300px;
+            font-family: $mainFont;
+            color: white;
+
+            &__imgCrossWhite {
+                right: unset;
+                left: 10%;
+                bottom: 7%;
+            }
+
+            &__imgCrossBlue {
+                right: 7%;
+                top: 15%;
+
+                &--smaller {
+                    top: 8%;
+                    left: 10%;
+                }
+
+            }
+
+            &__logo {
+                height: 25px;
+            }
+
+            &__address {
+                font-size: 20px;
+                width: 65%;
+            }
+
+            &__hr {
+                width: 90%;
+                margin-bottom: 15px;
+
+            }
+
+        }
+    }
+
+}
+
+@media (orientation:landscape) and (min-width: 1024px) {
+    .wrapContact {
+
+        .contact {
+            &__title {
+                width: 40vw;
+                font-size: 35px;
+            }
+
+            &__dropdownLabel {
+                font-size: 20px;
+            }
+
+            &__name,
+            &__email,
+            &__dropdown,
+            &__message {
+                width: 40vw;
+                font-size: 25px;
+                margin: 10px 0;
+            }
+        }
+
+        .localization {
+
+            &__logo {
+                height: 45px;
+            }
+
+            &__address {
+                font-size: 30px;
+            }
+
+        }
+    }
+}
+
+@media (orientation:landscape) and (min-width: 1400px) {
+    .wrapContact {
+        flex-direction: column-reverse;
+
+        .contact {
+            width: 100vw;
+            height: 75vh;
+
+            &__title {
+                width: 40vw;
+                font-size: 35px;
+            }
+
+            &__dropdownLabel {
+                font-size: 20px;
+            }
+
+            &__name,
+            &__email,
+            &__dropdown,
+            &__message {
+                width: 40vw;
+                font-size: 25px;
+                margin: 10px 0;
+            }
+        }
+
+        .localization {
+            flex-direction: row;
+            width: 100vw;
+            height: 25vh;
+            min-height: 100px;
+
+            &__imgCrossWhite {
+                left: 30%;
+                width: 50px;
+            }
+
+            &__imgCrossBlue {
+                width: 50px;
+                left: 20%;
+
+                &--smaller {
+                    width: 20px;
+                    left: 75%
+                }
+
+            }
+
+            &__logo {
+                height: 45px;
+                margin: 0;
+                margin-right: 50px;
+                padding: 0;
+            }
+
+            &__address {
+                font-size: 30px;
+                width: auto;
+            }
+
+        }
+    }
 }

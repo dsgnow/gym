@@ -649,6 +649,13 @@
             }
         }
 
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1366px) {
+
+    .wrapOffer {
+
         .columnOfferPlans {
 
             &__navigation {

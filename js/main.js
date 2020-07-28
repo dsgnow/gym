@@ -83,7 +83,7 @@ $(window).on('scroll', function () {
         nav.classList.add('nav--solidBgc');
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
-        nav.classList.remove('nav--solidBgc');
+
     }
 
 

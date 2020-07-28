@@ -2285,6 +2285,9 @@
   .wrapOffer .columnOfferTexts__listElementImg {
     height: 23px;
   }
+}
+
+@media (orientation: landscape) and (min-width: 1366px) {
   .wrapOffer .columnOfferPlans__navigation {
     display: none;
   }
@@ -2401,7 +2404,7 @@
 
 .wrapContact .contact {
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2441,6 +2444,7 @@
 
 .wrapContact .contact__title {
   width: 60vw;
+  min-width: 250px;
   padding: 5px 15px;
   margin-bottom: 8px;
   background: #1e365d;
@@ -2455,6 +2459,7 @@
 
 .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
   width: 60vw;
+  min-width: 250px;
   font-family: "Oswald", sans-serif;
   padding: 4px;
   margin: 4px;
@@ -2471,7 +2476,7 @@
 
 .wrapContact .localization {
   width: 100vw;
-  height: 40vh;
+  height: 30vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2487,7 +2492,7 @@
           align-items: center;
   position: relative;
   min-height: 200px;
-  min-width: 300px;
+  min-width: 200px;
   font-family: "Oswald", sans-serif;
   color: white;
 }
@@ -2509,8 +2514,7 @@
 }
 
 .wrapContact .localization__logo {
-  height: 30px;
-  margin-top: 20px;
+  height: 20px;
 }
 
 .wrapContact .localization__address {
@@ -2529,7 +2533,7 @@
           align-items: center;
   font-style: normal;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
   width: 65%;
 }
 
@@ -2540,7 +2544,199 @@
 }
 
 .wrapContact .localization__hr {
-  width: 100%;
-  margin-bottom: 10px;
+  width: 80%;
+  margin-bottom: 8px;
+  margin-top: -10px;
+}
+
+@media (orientation: portrait) and (min-width: 768px) {
+  .wrapContact .contact__title {
+    width: 60vw;
+    font-size: 35px;
+  }
+  .wrapContact .contact__dropdownLabel {
+    font-size: 20px;
+  }
+  .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
+    width: 60vw;
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .wrapContact .localization__logo {
+    height: 45px;
+  }
+  .wrapContact .localization__address {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: portrait) and (min-width: 1024px) {
+  .wrapContact .contact__title {
+    width: 60vw;
+    font-size: 45px;
+  }
+  .wrapContact .contact__dropdownLabel {
+    font-size: 25px;
+  }
+  .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
+    width: 60vw;
+    font-size: 30px;
+    margin: 10px 0;
+  }
+  .wrapContact .localization__logo {
+    height: 55px;
+  }
+  .wrapContact .localization__address {
+    font-size: 35px;
+  }
+}
+
+@media (orientation: landscape) {
+  .wrapContact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .wrapContact .contact {
+    width: 60vw;
+    height: 100vh;
+    min-height: 300px;
+    min-width: 300px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .wrapContact .contact__title {
+    width: 40vw;
+    min-width: 250px;
+  }
+  .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
+    width: 40vw;
+    min-width: 250px;
+  }
+  .wrapContact .localization {
+    width: 40vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    min-height: 300px;
+    min-width: 300px;
+    font-family: "Oswald", sans-serif;
+    color: white;
+  }
+  .wrapContact .localization__imgCrossWhite {
+    right: unset;
+    left: 10%;
+    bottom: 7%;
+  }
+  .wrapContact .localization__imgCrossBlue {
+    right: 7%;
+    top: 15%;
+  }
+  .wrapContact .localization__imgCrossBlue--smaller {
+    top: 8%;
+    left: 10%;
+  }
+  .wrapContact .localization__logo {
+    height: 25px;
+  }
+  .wrapContact .localization__address {
+    font-size: 20px;
+    width: 65%;
+  }
+  .wrapContact .localization__hr {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1024px) {
+  .wrapContact .contact__title {
+    width: 40vw;
+    font-size: 35px;
+  }
+  .wrapContact .contact__dropdownLabel {
+    font-size: 20px;
+  }
+  .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
+    width: 40vw;
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .wrapContact .localization__logo {
+    height: 45px;
+  }
+  .wrapContact .localization__address {
+    font-size: 30px;
+  }
+}
+
+@media (orientation: landscape) and (min-width: 1400px) {
+  .wrapContact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .wrapContact .contact {
+    width: 100vw;
+    height: 75vh;
+  }
+  .wrapContact .contact__title {
+    width: 40vw;
+    font-size: 35px;
+  }
+  .wrapContact .contact__dropdownLabel {
+    font-size: 20px;
+  }
+  .wrapContact .contact__name, .wrapContact .contact__email, .wrapContact .contact__dropdown, .wrapContact .contact__message {
+    width: 40vw;
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  .wrapContact .localization {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100vw;
+    height: 25vh;
+    min-height: 100px;
+  }
+  .wrapContact .localization__imgCrossWhite {
+    left: 30%;
+    width: 50px;
+  }
+  .wrapContact .localization__imgCrossBlue {
+    width: 50px;
+    left: 20%;
+  }
+  .wrapContact .localization__imgCrossBlue--smaller {
+    width: 20px;
+    left: 75%;
+  }
+  .wrapContact .localization__logo {
+    height: 45px;
+    margin: 0;
+    margin-right: 50px;
+    padding: 0;
+  }
+  .wrapContact .localization__address {
+    font-size: 30px;
+    width: auto;
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -77,6 +77,8 @@
   -webkit-transition: .3s;
   transition: .3s;
   cursor: pointer;
+  outline: 0;
+  outline: none;
 }
 
 .button:hover {

@@ -1,72 +1,77 @@
 // hamburger //
-const $hambPop = $('.navBurger');
-const $hambButton = $('.navBurgerBox__btn');
-const $hambSpan = $('.navBurgerBox__span');
+const hambPop = document.querySelector('.navBurger');
+const hambButton = document.querySelector('.navBurgerBox__btn');
+const hambSpan = document.querySelectorAll('.navBurgerBox__span');
+const boxBurger = document.querySelector('.navBurgerBox');
 
-const $navLinks = $('.nav__link');
 let hambActiveFlag = false;
 let mql = window.matchMedia("(orientation: portrait)");
 
 if (mql.matches) {
-    $hambSpan.addClass('navBurgerBox__span--white');
-    // $hambSpan.removeClass('navBurger__span--black');
+    hambSpan.forEach(function (hambSpan) {
+        hambSpan.classList.add('navBurgerBox__span--white');
+    })
 } else {
-    // $hambSpan.addClass('navBurger__span--black');
-    $hambSpan.addClass('navBurgerBox__span--white');
+    hambSpan.forEach(function (hambSpan) {
+        hambSpan.classList.add('navBurgerBox__span--white');
+    })
 }
 
-$('nav a').on('click', function (e) {
-    e.preventDefault();
-    const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
-    $('body, html').animate({
-        scrollTop: $(goToSection).offset().top
-    }, 500)
+const navAllLinks = document.querySelectorAll('.nav__link');
+navAllLinks.forEach(function (navLink) {
+    navLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        const goToSection = "[data-sectionin=" + this.dataset.section + "]";
+        document.querySelector(goToSection).scrollIntoView({
+            behavior: 'smooth'
+        });
 
+    })
 })
 
-$('.navBurger a').on('click', function () {
-    hambActiveFlag = !hambActiveFlag;
-    $hambButton.toggleClass('navBurgerBox__btn--active');
-    $hambButton.toggleClass('navBurgerBox__btn--notActive');
-    $hambPop.toggleClass('navBurger--show');
-    $hambPop.toggleClass('navBurger--hide');
-    // $hambSpan.toggleClass('navBurger__span--black');
+const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
+navAllBurgerLinks.forEach(function (navBurgerLink) {
+    navBurgerLink.addEventListener('click', function (e) {
+        e.preventDefault();
+        hambActiveFlag = !hambActiveFlag;
+        hambButton.classList.toggle('navBurgerBox__btn--active');
+        hambButton.classList.toggle('navBurgerBox__btn--notActive');
+        hambPop.classList.toggle('navBurger--show');
+        hambPop.classList.toggle('navBurger--hide');
 
-    const goToSection = "[data-sectionin=" + $(this).data('section') + "]";
-    $('body, html').animate({
-        scrollTop: $(goToSection).offset().top
-    }, 500)
+        const goToSection = "[data-sectionin=" + this.dataset.section + "]";
+        document.querySelector(goToSection).scrollIntoView({
+            behavior: 'smooth'
+        });
+    })
 })
 
-$('.navBurgerBox').on('click', function (e) {
-    hambActiveFlag = !hambActiveFlag;
+boxBurger.addEventListener('click', function (e) {
     e.preventDefault();
-    $hambButton.toggleClass('navBurgerBox__btn--active');
-    $hambButton.toggleClass('navBurgerBox__btn--notActive');
-    // $hambSpan.toggleClass('navBurger__span--black');
+    hambButton.classList.toggle('navBurgerBox__btn--active');
+    hambButton.classList.toggle('navBurgerBox__btn--notActive');
 
-    $hambPop.toggleClass('navBurger--show');
-    $hambPop.toggleClass('navBurger--hide');
-    $hambPop.show();
+    hambPop.classList.toggle('navBurger--show');
+    hambPop.classList.toggle('navBurger--hide');
+    hambPop.style.display = 'block';
 })
 
 // changes on scrolll //
-$(window).on('scroll', function () {
+window.addEventListener('scroll', function () {
 
     var isSafari = window.safari !== undefined;
     let bodyelem = '';
 
     if (isSafari) {
-        bodyelem = $("body");
+        bodyelem = document.querySelector('body')
     } else {
         bodyelem = window;
     }
 
-
-    const windowHeight = $(bodyelem).height();
-    const scrollValue = $(bodyelem).scrollTop();
-
+    const windowHeight = bodyelem.innerHeight;
+    const scrollValue = bodyelem.scrollY;
     const nav = document.querySelector('nav');
+
     // change nav color //
     if ((scrollValue < 50)) {
         nav.classList.remove('nav--transBgc');
@@ -85,8 +90,6 @@ $(window).on('scroll', function () {
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
 
     }
-
-
 })
 
 // swipe event //
@@ -204,12 +207,10 @@ swiper.onLeft(function () {
     clearSwipe();
     turnRight();
 });
-
 swiper.onRight(function () {
     clearSwipe();
     turnLeft();
 });
-
 swiper.run();
 
 rightOfferClick.addEventListener('click', function () {
@@ -223,33 +224,36 @@ leftOfferClick.addEventListener('click', function () {
 });
 
 //button redirections//
-const btnMeetUs = $('.columnTexts__btn');
+const btnMeetUs = document.querySelector('.columnTexts__btn');
+const plansBtns = document.querySelectorAll('.columnOfferPlans__btn');
 
-const plansBtn = $('.columnOfferPlans__btn');
-const planStarterBtn = $('.columnOfferPlans__btn--starter');
-const planStandardBtn = $('.columnOfferPlans__btn--standard');
-const planPremiumBtn = $('.columnOfferPlans__btn--premium');
-
-btnMeetUs.on('click', function () {
+btnMeetUs.addEventListener('click', function (e) {
+    e.preventDefault();
     const goToSection = "[data-sectionin=nav__link--about]";
-    $('body, html').animate({
-        scrollTop: $(goToSection).offset().top
-    }, 500)
+    document.querySelector(goToSection).scrollIntoView({
+        behavior: 'smooth'
+    });
+
 })
 
-plansBtn.on('click', function () {
+plansBtns.forEach(function (planBtn) {
 
-    const chooseOffer = $('.contact__dropdown');
-    if (this.classList.contains('columnOfferPlans__btn--starter')) {
-        chooseOffer.val('starter');
-    } else if (this.classList.contains('columnOfferPlans__btn--standard')) {
-        chooseOffer.val('standard');
-    } else if (this.classList.contains('columnOfferPlans__btn--premium')) {
-        chooseOffer.val('premium');
-    }
+    planBtn.addEventListener('click', function (e) {
+        e.preventDefault();
 
-    const goToSection = "[data-sectionin=nav__link--contact]";
-    $('body, html').animate({
-        scrollTop: $(goToSection).offset().top
-    }, 500)
+        const chooseOffer = document.querySelector('.contact__dropdown');
+        if (this.classList.contains('columnOfferPlans__btn--starter')) {
+            chooseOffer.value = 'starter';
+        } else if (this.classList.contains('columnOfferPlans__btn--standard')) {
+            chooseOffer.value = 'standard';
+        } else if (this.classList.contains('columnOfferPlans__btn--premium')) {
+            chooseOffer.value = 'premium';
+        }
+
+        const goToSection = "[data-sectionin=nav__link--contact]";
+        document.querySelector(goToSection).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    })
 })

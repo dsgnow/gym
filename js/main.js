@@ -222,6 +222,34 @@ leftOfferClick.addEventListener('click', function () {
     turnLeft();
 });
 
+//button redirections//
+const btnMeetUs = $('.columnTexts__btn');
 
-// var image = document.getElementsByClassName('columnAboutImages__imgTrainer');
-// new simpleParallax(image);
+const plansBtn = $('.columnOfferPlans__btn');
+const planStarterBtn = $('.columnOfferPlans__btn--starter');
+const planStandardBtn = $('.columnOfferPlans__btn--standard');
+const planPremiumBtn = $('.columnOfferPlans__btn--premium');
+
+btnMeetUs.on('click', function () {
+    const goToSection = "[data-sectionin=nav__link--about]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    }, 500)
+})
+
+plansBtn.on('click', function () {
+
+    const chooseOffer = $('.contact__dropdown');
+    if (this.classList.contains('columnOfferPlans__btn--starter')) {
+        chooseOffer.val('starter');
+    } else if (this.classList.contains('columnOfferPlans__btn--standard')) {
+        chooseOffer.val('standard');
+    } else if (this.classList.contains('columnOfferPlans__btn--premium')) {
+        chooseOffer.val('premium');
+    }
+
+    const goToSection = "[data-sectionin=nav__link--contact]";
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top
+    }, 500)
+})

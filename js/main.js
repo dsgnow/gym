@@ -1,24 +1,14 @@
-// hamburger //
+// navigation //
 const hambPop = document.querySelector('.navBurger');
 const hambButton = document.querySelector('.navBurgerBox__btn');
 const hambSpan = document.querySelectorAll('.navBurgerBox__span');
 const boxBurger = document.querySelector('.navBurgerBox');
-
 let hambActiveFlag = false;
-let mql = window.matchMedia("(orientation: portrait)");
-
-if (mql.matches) {
-    hambSpan.forEach(function (hambSpan) {
-        hambSpan.classList.add('navBurgerBox__span--white');
-    })
-} else {
-    hambSpan.forEach(function (hambSpan) {
-        hambSpan.classList.add('navBurgerBox__span--white');
-    })
-}
-
 const navAllLinks = document.querySelectorAll('.nav__link');
+const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
+
 navAllLinks.forEach(function (navLink) {
+
     navLink.addEventListener('click', function (e) {
         e.preventDefault();
         const goToSection = "[data-sectionin=" + this.dataset.section + "]";
@@ -29,8 +19,8 @@ navAllLinks.forEach(function (navLink) {
     })
 })
 
-const navAllBurgerLinks = document.querySelectorAll('.navBurger__link');
 navAllBurgerLinks.forEach(function (navBurgerLink) {
+
     navBurgerLink.addEventListener('click', function (e) {
         e.preventDefault();
         hambActiveFlag = !hambActiveFlag;
@@ -43,6 +33,7 @@ navAllBurgerLinks.forEach(function (navBurgerLink) {
         document.querySelector(goToSection).scrollIntoView({
             behavior: 'smooth'
         });
+
     })
 })
 
@@ -50,7 +41,6 @@ boxBurger.addEventListener('click', function (e) {
     e.preventDefault();
     hambButton.classList.toggle('navBurgerBox__btn--active');
     hambButton.classList.toggle('navBurgerBox__btn--notActive');
-
     hambPop.classList.toggle('navBurger--show');
     hambPop.classList.toggle('navBurger--hide');
     hambPop.style.display = 'block';
@@ -86,8 +76,6 @@ window.addEventListener('scroll', function () {
 
     } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 3)) {
         nav.classList.add('nav--solidBgc');
-
-    } else if ((scrollValue >= windowHeight) && (scrollValue < windowHeight * 4)) {
 
     }
 })
@@ -173,6 +161,7 @@ const leftOfferClick = document.querySelector('.columnOfferPlans__navigation--le
 let offers = [...document.querySelectorAll('.columnOfferPlans__offer')];
 
 const clearSwipe = function () {
+
     offers.forEach(function (offer, index) {
         if (offer.classList.contains('columnOfferPlans__offer--active')) {
             planIndex = index;
@@ -207,12 +196,15 @@ swiper.onLeft(function () {
     clearSwipe();
     turnRight();
 });
+
 swiper.onRight(function () {
     clearSwipe();
     turnLeft();
 });
+
 swiper.run();
 
+// slider offers //
 rightOfferClick.addEventListener('click', function () {
     clearSwipe();
     turnRight();
@@ -230,10 +222,10 @@ const plansBtns = document.querySelectorAll('.columnOfferPlans__btn');
 btnMeetUs.addEventListener('click', function (e) {
     e.preventDefault();
     const goToSection = "[data-sectionin=nav__link--about]";
+
     document.querySelector(goToSection).scrollIntoView({
         behavior: 'smooth'
     });
-
 })
 
 plansBtns.forEach(function (planBtn) {

@@ -2541,19 +2541,39 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-style: normal;
   text-align: center;
-  font-size: 18px;
-  width: 65%;
+  font-size: 14px;
+  width: auto;
 }
 
-.wrapContact .localization__tel {
+.wrapContact .localization__tel, .wrapContact .localization__email {
   text-decoration: none;
   font-style: normal;
   color: white;
+}
+
+.wrapContact .localization__icon {
+  margin-right: 20px;
+}
+
+.wrapContact .localization__icon--town {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.wrapContact .localization__wrapAdressElement {
+  margin-bottom: 10px;
+}
+
+.wrapContact .localization__wrapAdressElement--town {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .wrapContact .localization__hr {
@@ -2579,7 +2599,8 @@
     height: 45px;
   }
   .wrapContact .localization__address {
-    font-size: 30px;
+    font-size: 22px;
+    width: auto;
   }
 }
 
@@ -2600,7 +2621,8 @@
     height: 55px;
   }
   .wrapContact .localization__address {
-    font-size: 35px;
+    font-size: 25px;
+    width: auto;
   }
 }
 
@@ -2668,7 +2690,7 @@
   }
   .wrapContact .localization__address {
     font-size: 20px;
-    width: 65%;
+    width: auto;
   }
   .wrapContact .localization__hr {
     width: 90%;
@@ -2693,20 +2715,15 @@
     height: 45px;
   }
   .wrapContact .localization__address {
-    font-size: 30px;
+    font-size: 25px;
+    width: auto;
   }
 }
 
 @media (orientation: landscape) and (min-width: 1400px) {
-  .wrapContact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
   .wrapContact .contact {
-    width: 100vw;
-    height: 75vh;
+    width: 60vw;
+    height: 100vh;
   }
   .wrapContact .contact__title {
     width: 40vw;
@@ -2721,12 +2738,12 @@
     margin: 10px 0;
   }
   .wrapContact .localization {
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    width: 100vw;
-    height: 25vh;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40vw;
+    height: 100vh;
     min-height: 100px;
   }
   .wrapContact .localization__imgCrossWhite {
@@ -2744,8 +2761,11 @@
   .wrapContact .localization__logo {
     height: 45px;
     margin: 0;
-    margin-right: 50px;
+    margin-bottom: 50px;
     padding: 0;
+  }
+  .wrapContact .localization__icon {
+    margin-right: 20px;
   }
   .wrapContact .localization__address {
     font-size: 30px;

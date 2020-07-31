@@ -91,6 +91,12 @@
             color: white;
             font-size: 25px;
             margin: 20px 15px;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        &__icon:hover {
+            transform: scale(1.1);
         }
 
     }

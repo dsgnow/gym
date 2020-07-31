@@ -1404,6 +1404,14 @@
   color: white;
   font-size: 25px;
   margin: 20px 15px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.wrapAbout .columnAboutTexts__icon:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .wrapAbout .columnAboutImages {

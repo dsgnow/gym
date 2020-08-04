@@ -51,6 +51,12 @@
   text-align: center;
 }
 
+@media (min-width: 1024px) {
+  .slideDown {
+    display: none;
+  }
+}
+
 .icon {
   width: 60px;
   color: white;
@@ -138,7 +144,7 @@
 
 @media (orientation: landscape) and (min-width: 1366px) {
   .button {
-    font-size: 24px;
+    font-size: 18px;
     border-width: 3px;
     padding: 12px 18px;
   }
@@ -146,7 +152,7 @@
 
 @media (orientation: landscape) and (min-width: 1400px) {
   .button {
-    font-size: 26px;
+    font-size: 24px;
   }
 }
 
@@ -2308,6 +2314,19 @@
 }
 
 @media (orientation: landscape) and (min-width: 1366px) {
+  .wrapOffer .columnOfferTexts__title {
+    font-size: 50px;
+  }
+  .wrapOffer .columnOfferTexts__subTitle {
+    font-size: 45px;
+    margin: 3% 0;
+  }
+  .wrapOffer .columnOfferTexts__listElement {
+    font-size: 18px;
+  }
+  .wrapOffer .columnOfferTexts__listElementImg {
+    height: 28px;
+  }
   .wrapOffer .columnOfferPlans__navigation {
     display: none;
   }
@@ -2328,7 +2347,7 @@
     margin: 15px 0;
   }
   .wrapOffer .columnOfferPlans__listElement {
-    font-size: 12px;
+    font-size: 14px;
     margin: 5px 0;
     padding: 8px;
     text-align: center;
@@ -2608,7 +2627,6 @@
   }
   .wrapContact .localization__address {
     font-size: 22px;
-    width: auto;
   }
 }
 
@@ -2630,7 +2648,6 @@
   }
   .wrapContact .localization__address {
     font-size: 25px;
-    width: auto;
   }
 }
 
@@ -2698,7 +2715,6 @@
   }
   .wrapContact .localization__address {
     font-size: 20px;
-    width: auto;
   }
   .wrapContact .localization__hr {
     width: 90%;
@@ -2718,13 +2734,13 @@
     width: 40vw;
     font-size: 25px;
     margin: 10px 0;
+    padding: 10px;
   }
   .wrapContact .localization__logo {
     height: 45px;
   }
   .wrapContact .localization__address {
     font-size: 25px;
-    width: auto;
   }
 }
 
@@ -2744,6 +2760,7 @@
     width: 40vw;
     font-size: 25px;
     margin: 10px 0;
+    padding: 15px;
   }
   .wrapContact .localization {
     -webkit-box-orient: vertical;
@@ -2777,7 +2794,6 @@
   }
   .wrapContact .localization__address {
     font-size: 30px;
-    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

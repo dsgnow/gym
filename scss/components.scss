@@ -32,6 +32,10 @@
             transform: translate(-60%, 0);
             overflow: hidden;
             text-align: center;
+
+            @media (min-width:1024px) {
+                display: none;
+            }
         }
 
         .icon {
@@ -117,7 +121,7 @@
 
         @media (orientation: landscape) and (min-width: 1366px) {
             .button {
-                font-size: 24px;
+                font-size: 18px;
                 border-width: 3px;
                 padding: 12px 18px;
             }
@@ -126,6 +130,6 @@
         @media (orientation: landscape) and (min-width: 1400px) {
 
             .button {
-                font-size: 26px;
+                font-size: 24px;
             }
         }
